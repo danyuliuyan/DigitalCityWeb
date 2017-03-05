@@ -1,0 +1,314 @@
+*{
+    font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+}
+
+body{
+    background: url("../images/user-center-bg01.jpg") fixed  top center no-repeat;
+}
+/*修改头部样式*/
+.navbar-inverse{
+    background-color: rgba(3,3,3,0.3)!important;
+}
+.navbar {
+    border-bottom: none !important;
+    margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li.current > a {
+    color: #fab707;
+    background-color: rgba(3,3,3,0.5) !important;
+}
+
+.user-list li{
+    background-color: rgba(2,2,2,0.5) !important;
+}
+
+/*修改尾部样式*/
+footer{
+    background-color: rgba(3,3,3,0.3) !important;
+    position: fixed;
+    bottom: 0;
+}
+.main-container{
+    width: 1200px;
+    margin: 64px auto 50px;
+    padding: 100px 30px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#promptInfo{
+    position: absolute;
+    display: none;
+    top: 100px;
+    left: 40%;
+    width: 350px;
+    text-align: center;
+    font-size: 16px;
+}
+#promptInfo i{
+    font-size: 22px;
+}
+
+.left-menu{
+    width: 260px;
+    background-color: #E6E6E6;
+    padding-bottom: 100px;
+    border-radius: 5px;
+}
+.inner-menu{
+    padding: 10px 0;
+}
+.inner-menu h3{
+    font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+    padding: 0 20px;
+}
+.inner-menu h3 i{
+    margin-right: 10px;
+    font-size: 28px;
+}
+.inner-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.inner-menu ul li{
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+.inner-menu ul li a{
+    display: inline-block;
+    width: 260px;
+    text-decoration: none;
+    color: #333;
+}
+.inner-menu ul li a:hover{
+    color: #fff;
+}
+.inner-menu ul li:hover a{
+    color: #fff;
+}
+.inner-menu ul li:hover{
+    background-color: rgba(86,69,58,0.7);
+    color: #fff;
+}
+.inner-menu ul .chosen{
+    background-color: rgba(86,69,58,1) !important;
+    color: #fff;
+}
+.right-content{
+    width: 800px;
+    background-color: #E6E6E6;
+    border-radius: 5px;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.basic-info>div:nth-of-type(1){
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px dashed #aaa;
+}
+.info-part-1,.info-part-2{
+    padding: 10px;
+}
+.info-part-1>h3{
+    margin: 0 0 30px 0;
+}
+.info-detail{
+    line-height: 40px;
+    font-size: 16px;
+    display: flex;
+    display: -webkit-flex;
+    color: #666;
+    margin-top: 5px;
+}
+.info-detail div{
+    text-align: right;
+    width: 70px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+.user-avatar{
+    padding: 10px 10px 30px 30px;
+    border-left: 1px dashed #aaa;
+}
+.user-avatar img{
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 100px;
+}
+.user-sex{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    margin-right: -100px;
+    margin-top: 150px;
+}
+.user-sex i{
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+}
+.unknown{
+    background-color: #49AB4F;
+}
+.male{
+    background-color: #58BCF6;
+}
+.female{
+   background-color:  #f658eb;
+}
+.edit-avatar{
+    float: left;
+    display: none;
+    margin-left: -35px;
+}
+.edit-avatar i{
+    font-size: 32px;
+    color: rgba(250,183,7,0.7);
+    cursor: pointer;
+}
+.edit-avatar i:hover{
+    color: rgba(250,183,7,1);
+}
+
+.self-desc{
+    margin-top: 10px;
+}
+.self-desc .fa-pencil-square-o{
+    font-size: 20px;
+    margin-left: 10px;
+    color: rgba(250,183,7,0.7);
+    cursor: pointer;
+}
+.self-desc .fa-pencil-square-o:hover{
+    color: rgba(250,183,7,1);
+}
+.self-desc p{
+    margin-top: 10px;
+    margin-left: 30px;
+    text-indent: 32px;
+    width: 700px;
+    font-size: 16px;
+    color: #999 ;
+    font-style: italic;
+    line-height: 30px;
+}
+.self-desc>span{
+    font-size: 18px;
+    color: #333;
+    font-weight: bolder;
+}
+
+#editArea{
+    display: none;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+#editArea textarea{
+    width: 650px;
+    height: 100px;
+}
+#editArea>div{
+    text-align: right;
+    margin-right: 50px;
+    line-height: 28px;
+}
+#editArea button{
+    margin-top: 0;
+    margin-left: 10px;
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    outline: none;
+
+}
+#editSelfdescCancel{
+    background-color: rgba(86,69,58,0.7);
+    color: #fff;
+}
+#editSelfdescSave{
+    background-color: rgba(250,183,7,0.7);
+    color: #fff;
+}
+#editSelfdescCancel:hover{
+    background-color: rgba(86,69,58,1);
+}
+#editSelfdescSave:hover{
+    background-color: rgba(250,183,7,1);
+}
+
+#editSelfdesc .modal-dialog{
+    margin-top: 200px;
+}
+
+#editSelfdesc .modal-body textarea{
+    width: 570px;
+    height: 100px;
+}
+
+/*图片裁剪部分*/
+.modal-dialog{
+    margin-top: 8%;
+}
+.img-cropper{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.img-container,
+.img-preview {
+    background-color: #f7f7f7;
+    text-align: center;
+    overflow: hidden;
+}
+.img-container{
+    width: 300px;
+    height: 300px;
+}
+.preview-container{
+    width: 200px;
+    height: 200px;
+}
+.preview-container>p{
+    width: 200px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.img-preview{
+    width: 200px;
+    height: 200px;
+    border-radius: 99px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.img-container > img ,.img-preview > img {
+    max-width: 100%;
+}
+.preview-container>.btn{
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+}
+.preview-container>.btn:nth-of-type(1){
+    margin-bottom: 10px;
+}

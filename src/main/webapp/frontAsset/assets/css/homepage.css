@@ -1,0 +1,299 @@
+
+/*==================================================
+				全局设置
+==================================================*/
+*{
+	font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+	outline: none;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.wrapper{
+	/*background-color: rgba(3,3,3,0.9);*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.home-slider {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.carousel-inner{
+	width: 100%;
+	height: 100%;
+}
+.home-slider .carousel-inner > .item {
+	padding: 10% 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #f6f6f6 center no-repeat;
+	background-size: cover;
+}
+.carousel{
+	width: 100%;
+	height: 100%;
+}
+.bg-wrapper{
+	position:absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(3,3,3,0.7);
+}
+#item-1 {
+	background: url(../images/home-slide01.jpg);
+	background-size: cover;
+}
+#item-2 {
+	background: url(../images/home-slide02.jpg);
+	background-size: cover;
+}
+#item-3 {
+	background: url(../images/home-slide03.jpg);
+	background-size: cover;
+}
+#item-4 {
+	background: url(../images/home-slide04.jpg);
+	background-size: cover;
+}
+#item-5 {
+	background:  url(../images/home-slide05.jpg);
+	background-size: cover;
+}
+
+
+/*==================================================
+				数字大学之城
+==================================================*/
+.home-slider h1 {
+	color: #ffffff;
+	font-size: 60px;
+	margin-bottom: 35px;
+}
+.home-slider h4 > span {
+	display: inline-block;
+	margin-bottom: 3px;
+	padding: 5px 15px;
+	background: rgba(237, 62, 73, 0.9);
+	font-size: 18px;
+	color: #ffffff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+}
+.home-slider ul {
+	list-style-type: none;
+	padding: 0;
+}
+.home-slider a{
+	text-decoration: none;
+}
+
+
+/*==================================================
+				数字博物馆之城
+==================================================*/
+.home-slider #item-2 ul {
+	margin-top: 20px;
+}
+.home-slider #item-2 ul > li {
+	text-align: left;
+}
+.home-slider #item-2 ul > li > span {
+	display: inline-block;
+	margin-bottom: 3px;
+	padding: 3px 15px;
+	background: rgba(237, 62, 73, 0.9);
+	color: #ffffff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
+}
+.home-slider #item-2 ul.string > li > span {
+	background: rgba(43, 171, 207, 0.9);
+}
+.home-slider #item-2 ul > li h2 {
+	color: #ffffff;
+}
+
+/*==================================================
+				数字阅读之城
+==================================================*/
+.home-slider #item-3 ul {
+	margin: 30px 0;
+}
+.home-slider #item-3 ul > li {
+	font-size: 18px;
+	padding: 5px 0;
+	color: #ffffff;
+}
+.home-slider #item-3 ul > li > i {
+	color: #ed3e49;
+}
+
+.home-slider #item-3 img {
+	/*max-width: 300px;*/
+	margin: 0 auto;
+}
+
+/*==================================================
+				数字艺术之城
+==================================================*/
+.home-slider #item-4 ul {
+	margin: 30px 0;
+}
+.home-slider #item-4 ul > li {
+	font-size: 18px;
+	padding: 5px 0;
+	color: #ffffff;
+}
+.home-slider #item-4 ul > li > i {
+	color: #ed3e49;
+}
+
+/*==================================================
+				数字创意之城
+==================================================*/
+.home-slider #item-5 ul {
+	margin: 30px 0;
+}
+.home-slider #item-5 ul > li {
+	font-size: 18px;
+	padding: 5px 0;
+	color: #ffffff;
+}
+.home-slider #item-5 ul > li > i {
+	color: #ed3e49;
+}
+
+/*==================================================
+				动画延迟加载时间
+==================================================*/
+
+.delay-1 {
+	-webkit-animation-delay: 300ms;
+	-moz-animation-delay: 300ms;
+	animation-delay: 300ms;
+}
+.delay-2 {
+	-webkit-animation-delay: 600ms;
+	-moz-animation-delay: 600ms;
+	animation-delay: 600ms;
+}
+.delay-3 {
+	-webkit-animation-delay: 900ms;
+	-moz-animation-delay: 900ms;
+	animation-delay: 900ms;
+}
+.delay-4 {
+	-webkit-animation-delay: 1200ms;
+	-moz-animation-delay: 1200ms;
+	animation-delay: 1200ms;
+}
+.delay-5 {
+	-webkit-animation-delay: 1500ms;
+	-moz-animation-delay: 1500ms;
+	animation-delay: 1500ms;
+}
+.delay-6 {
+	-webkit-animation-delay: 1800ms;
+	-moz-animation-delay: 1800ms;
+	animation-delay: 1800ms;
+}
+.delay-7 {
+	-webkit-animation-delay: 2100ms;
+	-moz-animation-delay: 2100ms;
+	animation-delay: 2100ms;
+}
+.delay-8 {
+	-webkit-animation-delay: 2400ms;
+	-moz-animation-delay: 2400ms;
+	animation-delay: 2400ms;
+}
+
+
+/*轮播图指示器*/
+.carousel-indicators {
+	position: absolute;
+	bottom: 150px;
+	z-index: 15;
+	width: 100%;
+	left: -100px;
+	margin-left: -5%;
+	padding-left: 0;
+	list-style: none;
+	text-align: right;
+}
+.carousel-indicators li {
+	display: inline-block;
+	width: 20px !important;
+	height: 20px !important;
+	margin: 1px !important;
+	text-indent: -999px;
+	border: 3px solid rgba(255, 255, 255, .6);
+	border-radius: 0;
+	cursor: pointer;
+}
+.carousel-indicators .active {
+	background: #FFF;
+	border-color: #FFF;
+}
+
+a.carousel-arrow {
+	height: 60px;
+	width: 60px;
+	border-radius: 0;
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+	display: block;
+	top: 50%;
+	margin-top: -25px;
+	background: transparent;
+	color: transparent;
+	font-size: 32px;
+	font-weight: 300;
+	cursor: pointer;
+	-webkit-transition: background 300ms, color 300ms;
+	transition: background 300ms, color 300ms;
+}
+.carousel:hover a.carousel-arrow {
+	background: none;
+	color: #fff;
+}
+.carousel a.carousel-arrow:hover {
+	background: none;
+}
+a.carousel-arrow:hover,
+a.carousel-arrow:active {
+	text-decoration: none;
+}
+a.carousel-arrow-prev {
+	left: 10px;
+	right: auto;
+	padding-right: 5px;
+}
+a.carousel-arrow-next {
+	right: 10px;
+	left: auto;
+	padding-left: 5px;
+}

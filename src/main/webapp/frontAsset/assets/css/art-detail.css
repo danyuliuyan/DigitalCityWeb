@@ -1,0 +1,90 @@
+*{
+    font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+}
+.navbar-inverse{
+    background-color: #222;
+}
+.user-list li{
+    background-color: #222;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 30px;
+}
+footer{
+    position: static!important;
+    background-color: #222 !important;
+}
+.page-welcome{
+    width: 100%;
+    min-width: 1200px;
+    height: 700px;
+    /*background: url("../images/art-detail.jpg") center;*/
+    background: transparent;
+    border-top: 1px solid transparent;
+    background-size: cover;
+    overflow-y: hidden;
+}
+.page-welcome p{
+    width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 10px;
+    color: #fff;
+}
+.page-welcome img{
+    width: 100%!important;
+    min-width: 1200px;
+    min-height: 700px;
+}
+.each-part{
+    width: 100%;
+    min-width: 1200px;
+}
+.each-part>div{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+.each-part>div h2{
+    font-size:32px;
+    color:white;
+    margin: 0 0 20px;
+    font-weight:500;
+}
+.each-part>div h3{
+    color:white;
+    margin: 10px 0 40px;
+    font-style:italic;
+}
+.each-part>div iframe{
+    width: 1200px;
+    /*border: 1px solid red;*/
+}
+.instrument-frame{
+    background-color: #111;
+    /*border: 1px solid green;*/
+}
+#instrumentFrame{
+    margin: 0 auto;
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    /*border: 1px solid blue;*/
+}
+
+.key-rule{
+    background-color: #222;
+    height: 600px;
+}
+.teach-video{
+    background: url("../images/teach-video-bg.jpg") center;
+    background-size: cover;
+    height: 600px;
+}

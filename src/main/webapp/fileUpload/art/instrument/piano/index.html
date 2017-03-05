@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>钢琴</title>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/piano.js" ></script>
+<style>
+ body{margin:0;padding:0;}
+ ul,li{margin:0;padding:0;list-style-type:none;}
+ a{display:block;margin:0;padding:0;cursor:pointer;}
+ .piano-container{width:980px;height:241px;margin:0 auto;margin-top:100px; background:url(images/piano-top.png) left top repeat-x;overflow:hidden;position:relative;}
+ .piano-button-group{overflow:hidden;margin-top:2px;}
+ .piano-button-group .piano-whitebt{float:left;margin-right:1px;}
+ .button_name{width:34px;height:26px;line-height:26px;font-size:16px;color:white;font-family:"微软雅黑";text-align:center;}
+ .piano-whitebt a{}
+ /*白键未点击样式*/
+ .whitebt_normal{width:34px;height:213px;background:url(images/whitebutton.png) no-repeat left top;}
+ /*白键点击样式*/
+ .whitebt_press{width:34px;height:214px;background:url(images/whitebutton_press.png) no-repeat left top;}
+ /*白键点击特殊样式因为黑键在右边投影效果需要变更*/
+ .whitebt_press_special{width:34px;height:214px;background:url(images/whitebutton_press_special.png) no-repeat left top;}
+ /*黑键未点击样式*/
+ .blackbt-normal{width:29px;height:161px;background:url(images/blackbutton.png) no-repeat left top;}
+ /*黑键点击样式*/
+ .blackbt-press{width:29px;height:154px;background:url(images/blackbutton_press.png) no-repeat left top;}
+ .piano-blackbt-group{overflow:hidden;position:absolute;top:23px;left:20px;}
+ .piano-blackbt-group .piano-blackbt{float:left;cursor:pointer;}
+ /*适应按键做的修改*/
+ .whitebt_press_re{width:34px;height:214px; margin-top:23px; background:url(images/whitebutton_press.png) no-repeat left top;}
+ .whitebt_press_special_re{width:34px;height:214px;margin-top:23px;background:url(images/whitebutton_press_special.png) no-repeat left top;}
+
+</style>
+</head>
+
+<body>
+ <div class="piano-container">
+ <!--白键组-->
+  <ul class="piano-button-group">
+   <li class="piano-whitebt whitebt_right" ><div  class="button_name" >Q</div><a id="key0"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">W</div><a id="key1"></a></li>
+   <li class="piano-whitebt whitebt_left"><div  class="button_name">E</div><a id="key2"  ></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">R</div><a  id="key3"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">T</div><a  id="key4"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">Y</div><a  id="key5"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">U</div><a  id="key6"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">Z</div><a  id="key7"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">X</div><a  id="key8"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">C</div><a id="key9"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">V</div><a  id="key10"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">B</div><a id="key11"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">N</div><a id="key12"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">M</div><a id="key13"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">,</div><a id="key14" ></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">/</div><a id="key15"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">L</div><a id="key16"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">;</div><a id="key17"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">0</div><a id="key18"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">8</div><a id="key19"></a></li>
+   <li class="piano-whitebt whitebt_left "><div class="button_name">0</div><a id="key20"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">1</div><a id="key21"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">3</div><a id="key22"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">5</div><a id="key23"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">6</div><a id="key24"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">8</div><a id="key25"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">/</div><a id="key26"></a></li>
+   <li class="piano-whitebt whitebt_left"><div class="button_name">-</div><a id="key27"></a></li>
+   <li class="piano-whitebt whitebt_right"><div class="button_name">x</div><a id="key28"></a></li>
+  </ul>
+  <!--黑键组-->
+  <ul class="piano-blackbt-group">
+   <li class="piano-blackbt"></li>
+   <li class="piano-blackbt" id="keyb0"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb1"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb2"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb3"style="margin-left:6px;"></li>
+   
+   <li class="piano-blackbt" id="keyb4"style="margin-left:42px;"></li>
+   <li class="piano-blackbt" id="keyb5"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb6"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb7"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb8"style="margin-left:6px;"></li>
+   
+   <li class="piano-blackbt" id="keyb9"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb10"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb11"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb12"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb13"style="margin-left:6px;"></li>
+   
+   <li class="piano-blackbt" id="keyb14"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb15"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb16"style="margin-left:41px;"></li>
+   <li class="piano-blackbt" id="keyb17"style="margin-left:6px;"></li>
+   <li class="piano-blackbt" id="keyb18"style="margin-left:6px;"></li>
+  </ul>
+ </div>
+ 
+
+<script>
+<!--默认白键全部追加未点击的按键样式-->
+ $(".piano-whitebt a").addClass("whitebt_normal");
+<!--默认黑键键全部追加未点击的按键样式-->
+ $(".piano-blackbt").addClass("blackbt-normal");
+<!--测试白键按键切换效果，暂时用鼠标悬浮触发事件-->
+$(".whitebt_left a").mouseover(function(){
+ $(this).removeClass("whitebt_normal");
+ $(this).addClass("whitebt_press");
+});
+$(".whitebt_left a").mouseout(function(){
+ $(this).removeClass("whitebt_press");
+ $(this).addClass("whitebt_normal");
+});
+$(".whitebt_right a").mouseover(function(){
+ $(this).removeClass("whitebt_normal");
+ $(this).addClass("whitebt_press_special");
+});
+$(".whitebt_right a").mouseout(function(){
+ $(this).removeClass("whitebt_press_special");
+ $(this).addClass("whitebt_normal");
+});
+<!--测试黑键按键切换效果，暂时用鼠标悬浮触发事件-->
+$(".piano-blackbt").mouseover(function(){
+ $(this).removeClass("blackbt-normal");
+ $(this).addClass("blackbt-press");
+})
+$(".piano-blackbt").mouseout(function(){
+ $(this).removeClass("blackbt-press");
+ $(this).addClass("blackbt-normal");
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+footer{
+    background-color: rgba(3,3,3,0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer>div{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px 0 0 0;
+}

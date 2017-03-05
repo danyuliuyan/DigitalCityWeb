@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Document */
+/*手风琴样式*/
+/*@author 淡雨流烟*/
+/*@version 1.1.0*/
+#mainFrame{
+	height:600px;
+	background-image:url(../images/accordion.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+.whitekey{
+	visibility:hidden;
+}
+
+.rightkey{
+	position:absolute;
+	height:175px;
+	width:100px;
+	top:250px;
+	left:730px;
+	
+	}
+#youjian{
+	background-image:url(../images/zuojian0.png);
+	background-repeat:no-repeat;}
+	
+	
+#key0{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:40px;
+		margin-left:135px;
+	}
+		
+#key1{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:70px;
+		margin-left:140px;
+	}
+#key2{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:100px;
+		margin-left:144px;
+	}
+	#key3{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:130px;
+		margin-left:147px;
+	}
+	#key4{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:160px;
+		margin-left:150px;
+	}
+	#key5{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:188px;
+		margin-left:155px;
+	}
+	#key6{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:215px;
+		margin-left:158px;
+	}
+	#key7{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:243px;
+		margin-left:162px;
+	}
+	#key8{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:270px;
+		margin-left:166px;
+	}
+	#key9{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:300px;
+		margin-left:170px;
+	}
+	#key10{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:325px;
+		margin-left:175px;
+	}
+	#key11{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:350px;
+		margin-left:180px;
+	}
+	#key12{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:375px;
+		margin-left:185px;
+	}
+	#key13{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:400px;
+		margin-left:190px;
+	}
+		#key14{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:426px;
+		margin-left:195px;
+	}	
+	#key15{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:450px;
+		margin-left:200px;
+	}	
+	#key16{  position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:480px;
+		margin-left:206px;
+	}	
+	#key17{ 
+	position :absolute;
+        background-color:#00F;
+	    border-radius:5px;
+	    border-color:#06F;
+	    border-width:1px;
+	    border-style:solid;
+	    width:20px;
+	    height:20px;
+		margin-top:504px;
+		margin-left:210px;
+	}	

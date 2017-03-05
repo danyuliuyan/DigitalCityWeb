@@ -1,0 +1,142 @@
+*{
+    font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    /*background-color: #fff;*/
+    width: 100%;
+    height: 100%;
+    margin-top: -65px;
+}
+.navbar-inverse{
+    background-color: #222;
+}
+.user-list li{
+    background-color: #222;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 30px;
+}
+footer{
+    background-color: #222 !important;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.left-menu{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 99;
+    width: 240px;
+    /*border: 1px solid #ddd;*/
+    background-color: rgba(3,3,3,0.9);
+    height: 610px;
+    color: #fff;
+    margin-top: -2px;
+}
+.left-menu ul{
+    margin-top: 0;
+    padding: 0 10px;
+    height: 450px;
+    list-style-type: none;
+    margin-bottom: 100px;
+}
+.left-menu h3{
+    margin: 0;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    cursor: default;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.left-menu h3 i{
+    font-size: 28px;
+    margin-right: 10px;
+}
+.left-menu li{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.left-menu li a{
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition:font-size 1s, color 1s, -webkit-transform 1s;
+    transition:font-size 1s,color 1s, transform 1s;
+    font-size: 14px;
+}
+.left-menu li:hover a{
+    color: #fab707;
+    font-size: 18px;
+}
+.left-menu li a:hover{
+    color: #fab707;
+    font-size: 18px;
+}
+.left-menu .current{
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+.left-menu .current a{
+    color: #fab707;
+    font-size: 16px;
+}
+
+#hideArrow{
+    position: absolute;
+    top: 330px;
+    z-index: 999;
+    color: #fab707;;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 200px;
+}
+#showArrow{
+    position: absolute;
+    top: 330px;
+    z-index: 999;
+    color: #fab707;
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+}
+.map-content{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #999;
+    margin-top: -2px;
+}
+
+#allmap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin:0;
+}
+
+#canvas{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -99;
+}

@@ -1,0 +1,197 @@
+
+.navbar-inverse {
+    background: rgba(47,47,47,0.7);
+    border-bottom: none;
+}
+/*固定底部*/
+footer{
+    position:fixed;
+    background: rgba(3,3,3,0.5) !important;
+    bottom: 0;
+}
+.login-container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    background: url("../images/login-bg02.jpg");
+}
+
+.login-container>div{
+    width: 1200px;
+    margin: 100px auto 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.login-container>div img{
+    margin-left: -100px;
+    width: 700px;
+    position: relative;
+    z-index: 99;
+}
+
+
+.login-form{
+    display: none;
+    border: 1px solid #333;
+    margin: 110px 0;
+    float: right;
+    width: 350px;
+    padding: 20px 30px 30px 30px;
+    background-color: #191919;
+    border-radius: 5px;
+
+}
+
+.login-form .title{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-form .alert{
+    border: none;
+    height: 0;
+    visibility: hidden;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    background-color: #f67f7e;
+}
+.login-form .alert i{
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.login-form .input-group{
+    margin: 0 auto 10px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    align-items: flex-start;
+}
+.login-form .fa-times-circle{
+    display: none;
+    margin-left: -30px;
+    color: #ddd;
+    line-height: 40px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.login-form .input-group:first-child{
+    margin: 0 auto 30px;
+}
+
+.login-form .input-group span{
+    height: 40px;
+    width: 50px;
+}
+.login-form .input-group input{
+    height: 40px;
+    width: 235px;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+.login-form i{
+    font-size: 24px;
+    color: #999;
+}
+.login-form .btn-block{
+    outline: none;
+    width: 290px;
+    height: 40px;
+    background: rgba(250,183,7,0.8);
+    color: #fff;
+    font-size: 16px;
+    margin:30px auto 0;
+}
+.login-form .btn-block:hover,.login-form .btn-block:focus{
+    background: rgba(250,183,7,1);
+    color: #fff;
+
+}
+
+.login-form .option{
+    width: 290px;
+    margin: 10px auto 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.login-form .option a{
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.option a:hover{
+    color:#fab707;
+}
+
+#forgetPwdModal{
+    margin: 200px 0 0 -400px;
+}
+.modal-header{
+    border: none;
+}
+.modal-title{
+    font-size: 24px;
+    color: #333;
+}
+.modal-body{
+    font-size: 18px;
+    color: #666;
+    padding: 20px 50px 0;
+
+}
+
+.admin-contact{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 50px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #999;
+}
+.contact-title{
+    display: flex;
+    display: -webkit-flex;
+}
+.contact-title span{
+    padding: 0 10px;
+}
+.contact-title hr{
+    width: 200px;
+}
+
+.admin-contact .btn{
+    width: 200px;
+    height: 44px;
+    font-size: 14px;
+    color: #fff;
+}
+.admin-contact p{
+    margin: 0;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+}
+.admin-contact i{
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.admin-email{
+    background-color: #fab707;
+}
+
+.admin-phone{
+    background-color: #f5a062;
+}

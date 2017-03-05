@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+/*乐器框架样式*/
+/*@author 淡雨流烟*/
+/*@version 1.1.0*/
+.mainFrame{
+	position:relative;
+	margin:0 auto;
+	margin-top:100px;
+	border-style:solid;
+	border-width:2px;
+
+	width:1000px;
+	}
+.recorder{
+	position:relative;
+	width:1100px;
+	border: none;
+	height: 400px;
+	
+	}	
+

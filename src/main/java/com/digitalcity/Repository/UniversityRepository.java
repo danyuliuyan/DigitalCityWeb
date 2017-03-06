@@ -17,7 +17,7 @@ public interface UniversityRepository extends JpaRepository<University,String>,J
     @Query("select o from University o where lower(o.id)=lower(:id) ")
     public University findUniversityById(@Param("id") Integer id);
 
-    @Query("select o from University o order by o.name asc ")
+    @Query("select o from University o where o.status=0 order by o.name asc ")
     public List<University> findAllUniversitySortedByName();
 
     @Modifying

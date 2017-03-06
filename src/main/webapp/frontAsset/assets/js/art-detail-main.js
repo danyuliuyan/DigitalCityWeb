@@ -32,13 +32,33 @@ require(
         $('#instrumentFrame').mCustomScrollbar({
             theme:"light"
         });
-
+        setTimeout(function () {
+            setIframeSize();
+        },500);
+        setTimeout(function () {
+            setIframeSize();
+        },1000);
+        setTimeout(function () {
+            setIframeSize();
+        },1500);
+        setTimeout(function () {
+            setIframeSize();
+        },2000);
+        setTimeout(function () {
+            setIframeSize();
+        },2500);
+        setTimeout(function () {
+            setIframeSize();
+        },3000);
+        function setIframeSize(){
+            var iframeHeight = $("iframe").contents().find("body").height();
+            $('#iframeDetail').height(parseFloat(iframeHeight)+200);
+            $('#instrumentFrame').height(parseFloat(iframeHeight)+200);
+            $('.instrument-frame').height(parseFloat(iframeHeight)+450);
+        }
         window.onload=function () {
             // console.log($("iframe").contents().find("body").height());
-            var iframeHeight = $("iframe").contents().find("body").height();
-            $('#iframeDetail').height(parseFloat(iframeHeight)+150);
-            $('#instrumentFrame').height(parseFloat(iframeHeight)+150);
-            $('.instrument-frame').height(parseFloat(iframeHeight)+400);
+            setIframeSize();
         }
     }
 );

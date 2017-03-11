@@ -2,11 +2,12 @@
     font-family: 'Microsoft YaHei', 'Arial', sans-serif;
 }
 body{
-    background-color: #fff;
+    background-color: #222;
     height: 100%;
 }
 .navbar-inverse{
     background-color: #222;
+    border-bottom: 1px solid #111;
 }
 .user-list li{
     background-color: #222;
@@ -18,15 +19,17 @@ body{
 }
 footer{
     background-color: #222 !important;
+    border-top: 1px solid #111 !important;
     z-index: 99;
 }
 canvas {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -99;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*z-index: -99;*/
+    /*background-color: #333;*/
 }
 
 .main-container{
@@ -38,14 +41,15 @@ canvas {
 
 .title{
     padding: 20px 40px;
-    background-color: rgba(245,245,245,0.9);
-    border: 1px solid #ddd;
+    background-color: #444;
+    color: #ddd;
+    /*border: 1px solid #666;*/
 }
 .column-title{
     margin: 20px 0;
     height: 30px;
     font-weight: bold;
-    color: #666;
+    color: #eee;
     line-height: 30px;
     font-size: 18px;
     padding-left: 20px;
@@ -53,11 +57,11 @@ canvas {
 }
 
 .introduction{
-    background-color: rgba(245,245,245,0.9);
-    border: 1px solid #ddd;
+    background-color: #444;
+    /*border: 1px solid #666;*/
     padding: 20px;
     font-size: 14px;
-    color: #333;
+    color: #ddd;
     line-height: 24px;
 }
 .introduction p{
@@ -66,10 +70,17 @@ canvas {
 }
 
 .photos{
-    border: 1px solid #ddd;
-    background-color: rgba(245,245,245,0.9);
+    /*border: 1px solid #ddd;*/
+    background-color: #444;
 }
-
+.ad-controls{
+    color: #eee;
+    position: relative;
+    z-index: 99;
+}
+.ad-image{
+    border: 1px solid #ccc;
+}
 #gallery {
     padding: 30px;
     width: 100%;
@@ -102,8 +113,9 @@ canvas {
     height: 650px;
     padding: 0 20px;
     overflow: hidden;
-    border: 1px solid #ddd;
-    background-color: rgba(245,245,245,0.9);
+    /*border: 1px solid #ddd;*/
+    color: #eee;
+    background-color: #444;
 }
 .left-menu .current{
     color: #fab707;
@@ -111,6 +123,7 @@ canvas {
 .left-menu h3{
     width: 260px;
     text-align: center;
+    color: #eee;
     padding-bottom: 20px;
     border-bottom: 1px dotted #ccc;
 }
@@ -152,12 +165,11 @@ canvas {
 .right-content{
     width: 800px;
     height: 650px;
-    border: 1px solid #ddd;
-    background-color: rgba(245,245,245,0.9);
+    background-color: #444;
+    position: relative;
+    z-index: 99;
 }
-.ad-image{
-    border: 1px solid #ccc;
-}
+
 #fullScreenBtn{
     width: 50px;
     height: 50px;

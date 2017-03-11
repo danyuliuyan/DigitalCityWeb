@@ -9,7 +9,8 @@ require.config({
         "bootstrapJs":"bootstrap/js/bootstrap.min",
         "header":"js/common/header",
         "gallery":"gallery/js/jquery.ad-gallery",
-        "customerScrollbar":"custom-scrollbar/js/jquery.mCustomScrollbar"
+        "customerScrollbar":"custom-scrollbar/js/jquery.mCustomScrollbar",
+        "dotBg":"js/common/dot-bg"
     },
 
     shim:{
@@ -17,6 +18,7 @@ require.config({
         "bootstrapJs":{deps:["jQuery"]},
         "gallery":{deps:["jQuery"]},
         "customerScrollbar":{deps:["jQuery"]},
+        "dotBg":{deps:["jQuery"]}
     }
 });
 
@@ -27,6 +29,7 @@ require(
         "bootstrapJs",
         "header",
         "gallery",
+        "dotBg",
         "customerScrollbar"
     ],
     function ($) {

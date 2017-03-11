@@ -26,7 +26,7 @@
 <jsp:include page="include/header.jsp"></jsp:include>
 
 <%--<div id="canvas" class="gradient" ></div>--%>
-
+<canvas id="bg_show"></canvas>
 <div class="main-container" style="margin-top: 65px">
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/university-detail.css">

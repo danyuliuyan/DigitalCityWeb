@@ -1,7 +1,9 @@
 package com.digitalcity.Controller.Admin;
 
 import com.digitalcity.Model.Instrument;
+import com.digitalcity.Model.Music;
 import com.digitalcity.Service.InstrumentService;
+import com.digitalcity.Service.MusicService;
 import com.digitalcity.Utils.ExecuteResult;
 import com.digitalcity.Utils.FileDelete;
 import com.digitalcity.Utils.FileZip;
@@ -37,9 +39,11 @@ public class ArtController {
     @Autowired
     private InstrumentService instrumentService;
 
+    @Autowired
+    private MusicService musicService;
 
     @RequestMapping("/instrumentList")
-    public String artPage(Model model, Integer pageSize, Integer pageCurrent, String name, Integer status){
+    public String instrumentPage(Model model, Integer pageSize, Integer pageCurrent, String name, Integer status){
 
         Page<Instrument> instrumentList = null;
         try{
@@ -68,6 +72,43 @@ public class ArtController {
         return "backPage/Art/instrumentList";
     }
 
+    @RequestMapping("/musicList")
+    public String musicPage(Model model, Integer pageSize, Integer pageCurrent, String name, String singer, Integer status){
+
+        Page<Music> musicList = null;
+        try{
+            if(name!=null&&!name.equals("")){
+                model.addAttribute("name",name);
+            }
+
+            if(singer!=null&&!singer.equals("")){
+                model.addAttribute("singer",singer);
+            }
+            if(status!=null&&!status.equals("")){
+                model.addAttribute("status",status);
+            }
+
+            if (pageCurrent==null||pageCurrent.equals("")){
+                pageCurrent=0;
+            }else {
+                pageCurrent=pageCurrent-1;
+            }
+
+            if(pageSize==null||pageSize.equals("")){
+                pageSize=20;
+            }
+
+            PageRequest pageRequest=new PageRequest(pageCurrent,pageSize);
+            musicList = musicService.findAllMusic(name,singer,status,pageRequest);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        model.addAttribute("musicList",musicList);
+
+        return "backPage/Art/musicList";
+    }
+
     @RequestMapping(value = "/addInstrument",method = RequestMethod.GET)
     public String addInstrument(String id, Model model){
 
@@ -83,6 +124,54 @@ public class ArtController {
         }
 
         return "backPage/Art/addInstrument";
+    }
+
+    @RequestMapping(value = "/addMusic",method = RequestMethod.GET)
+    public String addMusic(String id, Model model){
+
+        if (id!=null){
+            /*编辑逻辑*/
+            Music music=null;
+            try {
+                music=musicService.findMusicById(Integer.parseInt(id));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            model.addAttribute("music",music);
+        }
+
+        return "backPage/Art/addMusic";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/addMusic", method = RequestMethod.POST)
+    public Object addMusic(Music music){
+        try{
+            if(music.getId()!=null){
+                /*编辑*/
+                musicService.updateMusic(music);
+                return executeResult.jsonReturnAndRefreshDialogId(200,"musicDialog");
+
+            }else{
+                /*添加*/
+                musicService.saveMusic(music);
+                return executeResult.jsonReturnAndRefreshDialogId(200,"musicDialog");
+            }
+
+        }catch (Exception e){
+            return executeResult.jsonReturn(300,e.getMessage());
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping("/deleteMusic")
+    public Object deletePicture(Integer id){
+        try {
+            musicService.deleteMusic(id);
+            return executeResult.jsonReturn(200,false);
+        } catch (Exception e) {
+            return executeResult.jsonReturn(300,e.getMessage(),false);
+        }
     }
 
     @ResponseBody
@@ -236,6 +325,59 @@ public class ArtController {
 
 
         ymd="fileUpload\\/art\\/instrument\\/"+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+
+        String parentPath=basePath+ymd+"\\/";
+
+        String readFilePath=null;
+
+        String path=null;
+        try {
+            //解析器解析request的上下文
+            CommonsMultipartResolver multipartResolver=new CommonsMultipartResolver(request.getSession().getServletContext());
+
+            String fileName=null;
+            //先判断request中是否包含multipart类型的数据，
+            if (multipartResolver.isMultipart(request)){
+                //再将request中的数据转化成multipart类型的数据
+                MultipartHttpServletRequest multiRequest=(MultipartHttpServletRequest) request;
+                Iterator iterator=multiRequest.getFileNames();
+                while (iterator.hasNext()){
+                    MultipartFile file=multiRequest.getFile((String)iterator.next());
+                    if (file!=null){
+                        fileName=file.getOriginalFilename();
+
+                        String imageType=fileName.substring(fileName.lastIndexOf(".")).trim().toLowerCase();
+                        String uuid= UUID.randomUUID().toString().replace("\\-","");//返回一个随机UUID
+                        String newFileName=uuid+imageType;
+
+                        path=parentPath+newFileName;
+                        readFilePath=ymd+"\\/"+newFileName;
+                        File localFile=new File(path);
+                        if (!localFile.getParentFile().exists()){
+                            localFile.getParentFile().mkdirs();
+                        }
+                        file.transferTo(localFile);
+                        System.out.println(readFilePath);
+
+                        FileZip.unZipFiles(localFile.getAbsolutePath(),parentPath);
+                    }
+                }
+            }
+            return executeResult.jsonReturnFile(200,fileName,readFilePath);
+        } catch (Exception e) {
+            return executeResult.jsonReturn(300,e.getMessage(),false);
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping("/uploadMusic")
+    public Object uploadMusic(HttpServletRequest request, HttpServletResponse response) throws Exception{
+
+        String basePath=request.getSession().getServletContext().getRealPath("/");
+        String ymd = "";
+
+
+        ymd="fileUpload\\/art\\/music\\/"+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 
         String parentPath=basePath+ymd+"\\/";
 

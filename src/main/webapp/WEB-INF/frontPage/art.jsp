@@ -52,7 +52,7 @@
     </div>
     <div class="instrument">
         <div>
-            <h2>乐器列表</h2>
+            <h2><span class="selected" data-ul-target="instrumentList">乐器列表</span><span data-ul-target="musicList">音乐试听</span></h2>
 
             <ul id="instrumentList" class="instrument-list">
 
@@ -77,6 +77,22 @@
                         </div>
                     </a>
                 </li>--%>
+            </ul>
+
+            <ul id="musicList" class="music-list">
+                <c:forEach var="listItem" items="${musicList}">
+                    <li>
+                        <label><i class="fa fa-music" aria-hidden="true"></i></label>
+                        <span>${listItem.name} --- ${listItem.singer}</span>
+                        <div class="options">
+                            <span><i class="fa fa-play" aria-hidden="true" title="点击播放"></i></span>
+                            <span><i class="fa fa-pause" aria-hidden="true" title="点击暂停"></i></span>
+                            <span><i class="fa fa-stop" aria-hidden="true" title="点击停止"></i></span>
+                            <%--<span><i class="fa fa-heart" aria-hidden="true" title="点击收藏/取消收藏"></i></span>--%>
+                        </div>
+                        <audio src="${pageContext.request.contextPath}/${listItem.source}" hidden></audio>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
     </div>

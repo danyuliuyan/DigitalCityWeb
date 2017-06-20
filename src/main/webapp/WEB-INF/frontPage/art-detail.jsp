@@ -52,7 +52,7 @@
         <div>
             <h2>使用教学动画案例</h2>
             <h3>Teaching animation case</h3>
-            <img src="${pageContext.request.contextPath}/frontAsset/images/key-rule.png" alt="">
+                <video src="${pageContext.request.contextPath}/frontAsset/video/movie.mp4" width="800" height="400" controls autobuffer></video>
         </div>
     </div>
 </div>

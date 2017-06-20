@@ -43,6 +43,9 @@ public class HomeIndexController {
     private InstrumentService instrumentService;
 
     @Autowired
+    private MusicService musicService;
+
+    @Autowired
     private PictureService pictureService;
 
     @Autowired
@@ -147,7 +150,9 @@ public class HomeIndexController {
         }
 
         List<Instrument> instrumentList = instrumentService.findAllInstrumentNormal();
+        List<Music> musicList = musicService.findAllShowMusic();
 
+        model.addAttribute("musicList",musicList);
         model.addAttribute("instrumentList",instrumentList);
 
         return "/frontPage/art";

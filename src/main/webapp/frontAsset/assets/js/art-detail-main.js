@@ -8,7 +8,8 @@ require.config({
         "jQuery":"js/common/jquery-2.2.4.min",
         "bootstrapJs":"bootstrap/js/bootstrap.min",
         "header":"js/common/header",
-        "customerScrollbar":"custom-scrollbar/js/jquery.mCustomScrollbar"
+        "customerScrollbar":"custom-scrollbar/js/jquery.mCustomScrollbar",
+        "html5media":"js/common/html5media.min"
     },
 
     shim:{
@@ -24,7 +25,8 @@ require(
         "jQuery",
         "bootstrapJs",
         "header",
-        "customerScrollbar"
+        "customerScrollbar",
+        "html5media"
     ],
     function ($) {
 

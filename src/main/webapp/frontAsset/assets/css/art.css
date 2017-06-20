@@ -122,6 +122,13 @@ footer{
     font-size: 42px;
     padding: 0 20px 20px;
 }
+.instrument>div h2 span{
+    margin-right: 50px;
+    cursor: pointer;
+}
+.instrument>div h2 span.selected{
+    border-bottom: 2px solid #fab707;
+}
 .instrument-list {
     list-style: none;
     display: flex;
@@ -169,4 +176,72 @@ footer{
     font-size: 1.5em;
     margin: 3.5em 0 0 0;
     text-align: center;
+}
+.music-list {
+    list-style-type: none;
+    padding-top: 20px;
+    display: none;
+}
+.music-list li{
+    height: 50px;
+    border: 1px dotted transparent;
+    border-bottom: 1px dotted #eee;
+    font-size: 24px;
+    color: #ccc;
+    /*margin: 5px 0;*/
+    padding-left: 20px;
+    line-height: 50px;
+}
+.music-list li label{
+    /*color: #ccc;*/
+    margin-right: 20px;
+}
+
+.rotate {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    color: #fab707;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.music-list li:hover{
+    /*border: 1px dotted #fab707;*/
+    background-color: rgba(250,183,7, 0.1);
+}
+
+.music-list .options{
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.music-list .options span{
+    margin: 0 5px;
+}
+
+.music-list .options span:hover{
+    color: #fab707;
+}
+
+.favorite{
+    color: #CD2929 !important;
 }

@@ -28,7 +28,7 @@
 <div class="main-container">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/art.css">
     <div class="page-welcome">
-        <p>欢迎使用虚拟乐器平台</p>
+        <p>欢迎使用网络原创音乐平台</p>
     </div>
     <div class="introduction">
         <div>

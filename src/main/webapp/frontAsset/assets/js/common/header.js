@@ -19,6 +19,21 @@ define(["jQuery"],function ($) {
             });
         });
 
+       $('.slide-menu').hover(function(){
+           var $this = $(this);
+           $this.find('ul').css({
+               borderTop:"1px solid #fab707"
+           });
+           $this.find('ul').stop().slideDown();
+       },function(){
+           var $this = $(this);
+           $this.find('ul').stop().slideUp(function(){
+               $this.css({
+                   borderBottom:"none"
+               })
+           });
+       });
+
        /*获取当前点击的tab标签*/
 
        var currentTab=1;

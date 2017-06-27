@@ -42,9 +42,37 @@
         background-color: #222 !important;
     }
 </style>
+<%--<div class="main-container" style="margin-top: 65px">--%>
+    <%--<div style="width: 1200px;margin: 0 auto;height: 500px;padding: 50px;font-size: 24px">--%>
+        <%--数字创意之城，内容维护中……--%>
+    <%--</div>--%>
+<%--</div>--%>
+
 <div class="main-container" style="margin-top: 65px">
-    <div style="width: 1200px;margin: 0 auto;height: 500px;padding: 50px;font-size: 24px">
-        数字创意之城，内容维护中……
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/innovate.css">
+    <!--左侧大学菜单-->
+    <canvas id="bg_show"></canvas>
+    <%--<i class="fa fa-angle-double-left" aria-hidden="true" id="hideArrow" title="点击隐藏高校列表"></i>--%>
+    <%--<i class="fa fa-angle-double-right" aria-hidden="true" id="showArrow" title="点击显示高校列表"></i>--%>
+
+    <div class="left-menu">
+        <h3><i class="fa fa-book" aria-hidden="true"></i>资源列表</h3>
+        <ul class="resources-list">
+            <c:if test="${articleList.size()==0}">暂无数据</c:if>
+            <c:forEach var="listItem" items="${articleList}">
+                <li data-organization-id="${listItem.organizationId}" data-url="${listItem.link}" title="${listItem.name}；点击查看详情"><a href="javascript:;">${listItem.name}</a></li>
+            </c:forEach>
+        </ul>
+    </div>
+
+    <div class="resource-content">
+        <%--<div id="viewer"></div>--%>
+        <iframe src="" frameborder="0" id="iframeDetail" height="auto" width="100%"></iframe>
+    </div>
+    <div>
+        <div class="intro">
+            <h3 data-toggle="tooltip" data-placement="bottom" title=""><a href="" target="_blank"></a></h3>
+        </div>
     </div>
 </div>
 
@@ -53,7 +81,7 @@
 
 <%--<script src="http://api.map.baidu.com/api?v=2.0&ak=BfUtbnZGGKU91gbZcRVYfnelh4ICnIQ3" rel="script"></script>--%>
 <script>var contextPath="${pageContext.request.contextPath}";</script>
-<script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/require.min.js" rel="script" defer data-main="${pageContext.request.contextPath}/frontAsset/assets/js/university-main"></script>
+<script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/require.min.js" rel="script" defer data-main="${pageContext.request.contextPath}/frontAsset/assets/js/innovate-main"></script>
 
 </body>
 </html>

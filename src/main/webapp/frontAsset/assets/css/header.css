@@ -52,9 +52,43 @@
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #fab707;
 }
+
+.slide-menu ul{
+    display: none;
+    /*width: 170px;*/
+    margin: 0;
+    position: relative;
+    z-index: 99;
+    padding: 0;
+    list-style-type: none;
+    /*border: 1px solid #333;*/
+    border-bottom: none;
+}
+.slide-menu ul li{
+    background-color: #222;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.slide-menu ul li:nth-last-of-type(1){
+    border-bottom: none;
+}
+
+.slide-menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.slide-menu li a:hover{
+    color: #fab707;
+}
+
 .login-option{
     margin-left: 100px;
 }
+
 .user-info{
     color: #fff;
     margin-left: 100px;

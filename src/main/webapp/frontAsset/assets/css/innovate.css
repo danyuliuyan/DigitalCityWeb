@@ -6,15 +6,20 @@ html{
     height: 100%;
 }
 body{
-    /*background-color: #fff;*/
+    background-color: #222;
     width: 100%;
     height: 100%;
     margin-top: -65px;
 }
+canvas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+ }
 .navbar-inverse{
     background-color: #222;
 }
-
 .user-list li{
     background-color: #222;
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -27,13 +32,8 @@ footer{
     background-color: #222 !important;
 }
 .main-container{
-    width: 100%;
-    height: 100%;
     margin: 0 auto;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    border-top: 1px solid transparent;
 }
 
 
@@ -42,9 +42,9 @@ footer{
     top: 65px;
     left: 0;
     z-index: 99;
-    width: 240px;
+    width: 380px;
     /*border: 1px solid #ddd;*/
-    background-color: rgba(3,3,3,0.9);
+    background-color: rgba(9,9,9,0.2);
     height: 610px;
     color: #fff;
     margin-top: -2px;
@@ -73,24 +73,29 @@ footer{
     width: 100%;
     height: 50px;
     line-height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 20px;
     text-align: center;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
+
 .left-menu li a{
     color: #fff;
     text-decoration: none;
-    -webkit-transition:font-size 1s, color 1s, -webkit-transform 1s;
-    transition:font-size 1s,color 1s, transform 1s;
     font-size: 14px;
 }
+.left-menu li.selected a{
+    color: #fab707;
+}
+
 .left-menu li:hover a{
     color: #fab707;
-    font-size: 18px;
 }
 .left-menu li a:hover{
     color: #fab707;
-    font-size: 18px;
 }
 .left-menu .current{
     /*background-color: rgba(0,0,0,0.5);*/
@@ -100,44 +105,58 @@ footer{
     font-size: 16px;
 }
 
-#hideArrow{
-    position: absolute;
-    top: 330px;
-    z-index: 999;
-    color: #fab707;;
-    font-size: 32px;
-    cursor: pointer;
-    margin-left: 200px;
+.resource-content{
+    /*border: 1px solid #999;*/
+    margin: 80px 0 0 390px;
+    /*width: 1200px;*/
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#showArrow{
+.resource-content iframe{
+    width: 1200px;
+    height: 600px;
+}
+
+.intro{
     position: absolute;
-    top: 330px;
-    z-index: 999;
+    z-index: 99;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    text-align: center;
+    border: 2px dotted #fab707;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.intro h3{
+    margin: 0;
+    padding: 5px 0;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #ccc;
+}
+.intro h3 a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+/*修改默认提示框样式*/
+/*.tooltip{*/
+    /*margin-left: 15px;*/
+/*}*/
+.tooltip-inner{
+    background: rgba(3,3,3,0.9);
     color: #fab707;
-    font-size: 32px;
-    cursor: pointer;
-    display: none;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 28px;
+    padding: 10px;
+    margin: 0;
 }
-.map-content{
-    width: 100%;
-    height: 100%;
-    border: 1px solid #999;
-    margin-top: -2px;
-}
-
-#allmap{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin:0;
-}
-
-#canvas{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -99;
+.tooltip-arrow{
+    border-bottom-color: rgba(3,3,3,0.9) !important;
 }

@@ -16,7 +16,9 @@ body{
 	height: 100%;
 }
 
-
+.slide-menu li{
+	background-color: rgba(3,3,3, 0.3) !important;
+}
 
 .wrapper{
 	/*background-color: rgba(3,3,3,0.9);*/

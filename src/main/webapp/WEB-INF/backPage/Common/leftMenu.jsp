@@ -23,7 +23,8 @@
                             <li data-id="art_0" data-pid="art" data-url="<%=request.getContextPath()%>/Art/instrumentList" data-tabid="art_0" data-fresh="true" data-reloadWarn="true">乐器列表</li>
                             <li data-id="art_1" data-pid="art" data-url="<%=request.getContextPath()%>/Art/musicList" data-tabid="art_1" data-fresh="true" data-reloadWarn="true">试听音乐列表</li>
                             <li data-id="innovate" data-pid="1">创新之城</li>
-                            <li data-id="innovate_0" data-pid="innovate" data-url="<%=request.getContextPath()%>/Innovate/innovatePage" data-tabid="innovate_0" data-fresh="true" data-reloadWarn="true">创新资源</li>
+                            <li data-id="innovate_0" data-pid="innovate" data-url="<%=request.getContextPath()%>/Innovate/organizationList" data-tabid="innovate_0" data-fresh="true" data-reloadWarn="true">单位列表</li>
+                            <li data-id="innovate_1" data-pid="innovate" data-url="<%=request.getContextPath()%>/Innovate/articleList" data-tabid="innovate_1" data-fresh="true" data-reloadWarn="true">博文列表</li>
                         </ul>
                     </div>
                 </div>

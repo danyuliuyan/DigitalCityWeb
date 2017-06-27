@@ -45,6 +45,14 @@ public class HomeIndexController {
     @Autowired
     private MusicService musicService;
 
+
+    @Autowired
+    private ArticleService articleService;
+
+
+    @Autowired
+    private OrganizationService organizationService;
+
     @Autowired
     private PictureService pictureService;
 
@@ -180,7 +188,25 @@ public class HomeIndexController {
             model.addAttribute("user",user);
         }
 
+        List<Article> articleList = articleService.findAllShowArticle();
+        List<Organization> organizationList = organizationService.findAllOrganization();
+
+        model.addAttribute("articleList",articleList);
+        model.addAttribute("organizationList",organizationList);
         return "/frontPage/innovate";
+    }
+
+    @ResponseBody
+    @RequestMapping(value="/originality/getOrganization", method = RequestMethod.POST)
+    public Map<String, Organization> innovate(@RequestParam("organizationId")String organizationId){
+        Map<String,Organization> map = new HashMap<>();
+
+        try{
+            map.put("organization",organizationService.findOrganizationById(Integer.parseInt(organizationId)));
+        }catch (Exception e){
+            map.put("organization",null);
+        }
+        return map;
     }
 
     /*登录*/

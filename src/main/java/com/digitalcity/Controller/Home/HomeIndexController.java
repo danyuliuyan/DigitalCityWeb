@@ -196,6 +196,15 @@ public class HomeIndexController {
         return "/frontPage/innovate";
     }
 
+    @RequestMapping("/sceneList")
+    public String sceneList(Model model, HttpSession session){
+        User user = (User)session.getAttribute("user");
+        if(user!=null){
+            model.addAttribute("user",user);
+        }
+        return "/frontPage/scene-list";
+    }
+
     @ResponseBody
     @RequestMapping(value="/originality/getOrganization", method = RequestMethod.POST)
     public Map<String, Organization> innovate(@RequestParam("organizationId")String organizationId){

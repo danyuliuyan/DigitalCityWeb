@@ -37,10 +37,16 @@
                 <li data-tab="2"><a href="${pageContext.request.contextPath}/university">大学之城</a></li>
                 <li data-tab="3"><a href="${pageContext.request.contextPath}/museum">博物馆之城</a></li>
                 <li data-tab="4"><a href="http://www.cjzww.com/" target="_blank">阅读之城</a></li>
-                <li data-tab="5"><a href="${pageContext.request.contextPath}/art">艺术之城</a></li>
+                <%--<li data-tab="5"><a href="${pageContext.request.contextPath}/art">艺术之城</a></li>--%>
+                <li data-tab="5" class="slide-menu"><a href="${pageContext.request.contextPath}/art">艺术之城</a>
+                    <ul>
+                        <li><a href="${pageContext.request.contextPath}/sceneList#art" target="_blank">三维艺术展</a></li>
+                    </ul>
+                </li>
                 <li data-tab="6" class="slide-menu"><a href="${pageContext.request.contextPath}/originality">创意之城</a>
                     <ul>
                         <li><a href="http://www.cmding.com/diysjzx/index.htm" target="_blank">工业创新</a></li>
+                        <li><a href="${pageContext.request.contextPath}/sceneList#originality" target="_blank">三维文创</a></li>
                     </ul>
                 </li>
                 <c:if test="${user==null}"><li class="login-option"><a href="${pageContext.request.contextPath}/login">登录/注册</a></li></c:if>

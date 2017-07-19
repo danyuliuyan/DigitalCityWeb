@@ -45,7 +45,7 @@
         <div>
             <h2>基本按键规则</h2>
             <h3>The basic rules of the keys</h3>
-            <img src="${pageContext.request.contextPath}/frontAsset/images/key-rule.png" alt="">
+            <img src="${pageContext.request.contextPath}/frontAsset/images/key-rule.jpg" alt="">
         </div>
     </div>
     <div class="each-part teach-video">

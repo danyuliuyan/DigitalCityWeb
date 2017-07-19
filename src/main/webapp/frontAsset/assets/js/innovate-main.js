@@ -43,20 +43,26 @@ require(
             loadIframe($('.resources-list li:eq(0)').attr('data-url'),$('.resources-list li:eq(0)').attr('data-organization-id'));
 
             function loadIframe(url,organizationId){
-                $.ajaxPrefilter( function (options) {
-                    if (options.crossDomain && jQuery.support.cors) {
-                        var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-                        options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-                        //options.url = "http://cors.corsproxy.io/url=" + options.url;
-                    }
-                });
-                $.get(url, function (response) {
-                    response = response.replace(/data-src/g, "src");
-                    var html_src = 'data:text/html;charset=utf-8,' + response;
-                    $("iframe").attr("src" , html_src).load(function(){
+                if(url.indexOf('ourinnovate')>=0){
+                    $("iframe").attr("src" , url).load(function(){
                         console.log(document.getElementById('iframeDetail').contentWindow.document.body.scrollHeight);
                     });
-                });
+                }else{
+                    $.ajaxPrefilter( function (options) {
+                        if (options.crossDomain && jQuery.support.cors) {
+                            var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+                            options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+                            //options.url = "http://cors.corsproxy.io/url=" + options.url;
+                        }
+                    });
+                    $.get(url, function (response) {
+                        response = response.replace(/data-src/g, "src");
+                        var html_src = 'data:text/html;charset=utf-8,' + response;
+                        $("iframe").attr("src" , html_src).load(function(){
+                            console.log(document.getElementById('iframeDetail').contentWindow.document.body.scrollHeight);
+                        });
+                    });
+                }
 
                 $.ajax({
                     method:'post',

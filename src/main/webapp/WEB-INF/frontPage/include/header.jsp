@@ -34,19 +34,27 @@
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <li data-tab="1" class="current-tab"><a href="${pageContext.request.contextPath}/index">首页</a></li>
-                <li data-tab="2"><a href="${pageContext.request.contextPath}/university">大学之城</a></li>
+                <li data-tab="2" class="slide-menu"><a href="${pageContext.request.contextPath}/university">大学之城</a>
+                <ul>
+                    <li><a href="${pageContext.request.contextPath}/">数字校史馆</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/">数字图书馆</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/">数字实验室</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/">数字校园</a> </li>
+                </ul>
+                </li>
                 <li data-tab="3"><a href="${pageContext.request.contextPath}/museum">博物馆之城</a></li>
                 <li data-tab="4"><a href="http://www.cjzww.com/" target="_blank">阅读之城</a></li>
-                <%--<li data-tab="5"><a href="${pageContext.request.contextPath}/art">艺术之城</a></li>--%>
-                <li data-tab="5" class="slide-menu"><a href="${pageContext.request.contextPath}/art">艺术之城</a>
+                <li data-tab="5" class="slide-menu"><a href="javascript:void(0)">艺术之城</a>
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/sceneList#art" target="_blank">三维艺术展</a></li>
+                        <li><a href="${pageContext.request.contextPath}/art">音乐创作平台</a> </li>
+                        <li><a href="${pageContext.request.contextPath}/sceneList#exhibition">数字展览馆</a></li>
+                        <li><a href="${pageContext.request.contextPath}/sceneList#gallery">数字艺术馆</a> </li>
                     </ul>
                 </li>
-                <li data-tab="6" class="slide-menu"><a href="${pageContext.request.contextPath}/originality">创意之城</a>
+                <li data-tab="6" class="slide-menu"><a href="javascript:void(0)">创意之城</a>
                     <ul>
-                        <li><a href="http://www.cmding.com/diysjzx/index.htm" target="_blank">工业创新</a></li>
-                        <li><a href="${pageContext.request.contextPath}/sceneList#originality" target="_blank">三维文创</a></li>
+                        <li><a href="${pageContext.request.contextPath}/digitalscene" target="_self">三维数字场景</a></li>
+                        <li><a href="${pageContext.request.contextPath}/digitalart" target="_self">数字美术</a></li>
                     </ul>
                 </li>
                 <c:if test="${user==null}"><li class="login-option"><a href="${pageContext.request.contextPath}/login">登录/注册</a></li></c:if>

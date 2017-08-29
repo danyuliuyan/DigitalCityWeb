@@ -182,27 +182,41 @@ public class HomeIndexController {
     }
 
     @RequestMapping("/originality")
-    public String innovate(Model model, HttpSession session){
+    public String innovate(Model model, HttpSession session,@RequestParam String name){
         User user = (User)session.getAttribute("user");
         if(user!=null){
             model.addAttribute("user",user);
         }
-
-        List<Article> articleList = articleService.findAllShowArticle();
+/*
+        List<Article> articleList = articleService.findAllShowArticle();*/
         List<Organization> organizationList = organizationService.findAllOrganization();
-
+        List<Article> articleList=articleService.findArticleByOrganization(name);
+        System.out.print(name);
+        System.out.print("测试");
         model.addAttribute("articleList",articleList);
         model.addAttribute("organizationList",organizationList);
         return "/frontPage/innovate";
     }
+    //跳转到三维数字场景
+    @RequestMapping(value ="/digitalscene" )
+    public String digitalScence(){
+        return "/frontPage/digital-scene-list";
+    }
 
+    //跳转到数字美术
+    @RequestMapping(value = "/digitalart")
+    public String digitalArt(Model model){
+        List<Organization> organizationList = organizationService.findAllOrganization();
+        model.addAttribute("organizationList",organizationList);
+        return "/frontPage/digital-art-list";
+    }
     @RequestMapping("/sceneList")
     public String sceneList(Model model, HttpSession session){
         User user = (User)session.getAttribute("user");
         if(user!=null){
             model.addAttribute("user",user);
         }
-        return "/frontPage/scene-list";
+        return "/frontPage/scene-list-new";
     }
 
     @ResponseBody

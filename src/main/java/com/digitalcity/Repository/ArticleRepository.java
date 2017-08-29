@@ -24,4 +24,7 @@ public interface ArticleRepository extends JpaRepository<Article,String>,JpaSpec
     @Modifying
     @Query("delete from Article where lower(id) = lower(:id) ")
     public void deleteArticle(@Param("id") Integer id);
+    @Query("select o from Article o,Organization u where o.organizationId=u.id and u.name=lower(:name)")
+    public List<Article> findArticleByOrganization(@Param("name")String name);
+
 }

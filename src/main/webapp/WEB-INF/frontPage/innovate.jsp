@@ -25,7 +25,7 @@
 
 <jsp:include page="include/header.jsp"></jsp:include>
 
-<%--<div id="canvas" class="gradient" ></div>--%>
+
 <style>
     .navbar-inverse{
         background-color: #222;
@@ -42,18 +42,11 @@
         background-color: #222 !important;
     }
 </style>
-<%--<div class="main-container" style="margin-top: 65px">--%>
-    <%--<div style="width: 1200px;margin: 0 auto;height: 500px;padding: 50px;font-size: 24px">--%>
-        <%--数字创意之城，内容维护中……--%>
-    <%--</div>--%>
-<%--</div>--%>
 
 <div class="main-container" style="margin-top: 65px">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/innovate.css">
     <!--左侧大学菜单-->
     <canvas id="bg_show"></canvas>
-    <%--<i class="fa fa-angle-double-left" aria-hidden="true" id="hideArrow" title="点击隐藏高校列表"></i>--%>
-    <%--<i class="fa fa-angle-double-right" aria-hidden="true" id="showArrow" title="点击显示高校列表"></i>--%>
 
     <div class="left-menu">
         <h3><i class="fa fa-book" aria-hidden="true"></i>资源列表</h3>
@@ -66,7 +59,6 @@
     </div>
 
     <div class="resource-content">
-        <%--<div id="viewer"></div>--%>
         <iframe src="" frameborder="0" id="iframeDetail" height="auto" width="100%"></iframe>
     </div>
     <div>

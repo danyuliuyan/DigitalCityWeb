@@ -50,7 +50,7 @@
 
     <div class="left-menu">
         <h3><i class="fa fa-book" aria-hidden="true"></i>资源列表</h3>
-        <ul class="resources-list">
+        <ul class="resources-list" id="resources-list">
             <c:if test="${articleList.size()==0}">暂无数据</c:if>
             <c:forEach var="listItem" items="${articleList}">
                 <li data-organization-id="${listItem.organizationId}" data-url="${listItem.link}" title="${listItem.name}；点击查看详情"><a href="javascript:;">${listItem.name}</a></li>
@@ -74,6 +74,13 @@
 <%--<script src="http://api.map.baidu.com/api?v=2.0&ak=BfUtbnZGGKU91gbZcRVYfnelh4ICnIQ3" rel="script"></script>--%>
 <script>var contextPath="${pageContext.request.contextPath}";</script>
 <script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/require.min.js" rel="script" defer data-main="${pageContext.request.contextPath}/frontAsset/assets/js/innovate-main"></script>
+<script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/jquery-2.2.4.min.js"></script>
+<script>
+    $("#resources-list li").click(function(){
 
+          let src=$(this).attr("data-url");
+          $("#iframeDetail").attr("src",src);
+    })
+</script>
 </body>
 </html>

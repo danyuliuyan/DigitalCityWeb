@@ -22,6 +22,16 @@ public class Picture {
     private String source;          //图片地址
     private String parentId;        //父亲id
 
+    public int getPictureType() {
+        return pictureType;
+    }
+
+    public void setPictureType(int pictureType) {
+        this.pictureType = pictureType;
+    }
+
+    private int pictureType;          //场景类别    1.数字校史馆  2.数字图书馆  3.数字实验室  4. 数字校园
+
     public String getName() {
         return name;
     }

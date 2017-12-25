@@ -59,12 +59,6 @@
                                 </a>
                             </li>
                         </c:forEach>
-                        <%--
-                        <li>
-                            <a href="${pageContext.request.contextPath}/frontAsset/images/9.jpg">
-                                <img src="${pageContext.request.contextPath}/frontAsset/images/thumbs/t9.jpg" title="A title for 9.jpg" alt="This is a nice, and incredibly descriptive, description of the image 9.jpg" class="image13">
-                            </a>
-                        </li>--%>
                     </ul>
                 </div>
             </div>

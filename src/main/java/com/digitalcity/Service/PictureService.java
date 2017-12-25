@@ -80,8 +80,10 @@ public class PictureService {
         return pictureRepository.findPictureById(id);
     }
 
-    public List<Picture> findOneTypePicture(Integer type, Integer parentId){ return pictureRepository.findOneTypePicture(type,parentId); }
+    public List<Picture> findOneTypePicture(Integer type, Integer parentId){ return pictureRepository.findOneTypePicture(type, parentId); }
 
+    /*按类别查找图片*/
+    public  List<Picture> findPictureByPictureType(Integer pictureType){return pictureRepository.findPictureByPictureType(pictureType);}
     /*保存图片信息*/
     public void savePicture(Picture picture){
         pictureRepository.save(picture);

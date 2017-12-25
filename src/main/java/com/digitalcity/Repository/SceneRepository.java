@@ -24,4 +24,7 @@ public interface SceneRepository extends JpaRepository<Scene,String>,JpaSpecific
     @Modifying
     @Query("delete from Scene where lower(id) = lower(:id) ")
     public void deleteScene(@Param("id") Integer id);
+    @Query("select o from Scene o where lower(o.sceneType)=lower(:type) ")
+    public List<Scene> findSceneByType(@Param("type") int type);
+
 }

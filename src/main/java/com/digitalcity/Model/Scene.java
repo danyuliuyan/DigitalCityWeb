@@ -20,6 +20,19 @@ public class Scene {
     private String description;     //场景描述
     private String source;          //场景地址
     private String parentId;        //父亲id
+    private int sceneType;          //场景类别    1.数字校史馆  2.数字图书馆  3.数字实验室  4. 数字校园
+
+    public int getSceneType() {
+        return sceneType;
+    }
+
+    public void setSceneType(int sceneType) {
+        this.sceneType = sceneType;
+    }
+
+
+
+
 
     public Integer getId() {
         return id;

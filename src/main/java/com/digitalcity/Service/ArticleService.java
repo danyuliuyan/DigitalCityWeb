@@ -105,5 +105,5 @@ public class ArticleService {
     }
 
     /*通过公司名称查找文章*/
-    public List<Article> findArticleByOrganization(String team){return articleRepository.findArticleByOrganization(team);}
+    public List<Article> findArticleByOrganization(int id){return articleRepository.findArticleByOrganization(id);}
 }

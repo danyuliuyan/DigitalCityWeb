@@ -34,12 +34,12 @@
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <li data-tab="1" class="current-tab"><a href="${pageContext.request.contextPath}/index">首页</a></li>
-                <li data-tab="2" class="slide-menu"><a href="${pageContext.request.contextPath}/university">大学之城</a>
+                <li data-tab="2" class="slide-menu"><a href="javascript:void(0)">大学之城</a>
                 <ul>
-                    <li><a href="${pageContext.request.contextPath}/">数字校史馆</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/">数字图书馆</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/">数字实验室</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/">数字校园</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/history?type=1">数字校史馆</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/library?type=2">数字图书馆</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/lab?type=3">数字实验室</a> </li>
+                    <li><a href="${pageContext.request.contextPath}/university">数字校园</a> </li>
                 </ul>
                 </li>
                 <li data-tab="3"><a href="${pageContext.request.contextPath}/museum">博物馆之城</a></li>

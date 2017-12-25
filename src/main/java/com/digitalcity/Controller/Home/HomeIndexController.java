@@ -71,7 +71,6 @@ public class HomeIndexController {
         if(user!=null){
             model.addAttribute("user",user);
         }
-
         return "/frontPage/homepage";
     }
 
@@ -87,19 +86,19 @@ public class HomeIndexController {
         return "/frontPage/register";
     }
 
+
+
     @RequestMapping("/university")
     public String university(Model model, HttpSession session){
         User user = (User)session.getAttribute("user");
         if(user!=null){
             model.addAttribute("user",user);
         }
-
         List<University> universityList = universityService.findUniversitySortedByName();
-
         model.addAttribute("universityList",universityList);
-
         return "/frontPage/university";
     }
+
 
     @RequestMapping("/universityDetail")
     public String universityDetail(Model model, HttpSession session,String id){
@@ -116,6 +115,34 @@ public class HomeIndexController {
 
         return "/frontPage/university-detail";
     }
+
+
+    //数字校史馆
+    @RequestMapping(value = "/history")
+    public String history(@RequestParam String type,Model model){
+        List<Scene> sceneList=sceneService.findSceneByType(Integer.parseInt(type));
+        model.addAttribute("sceneList",sceneList);
+        return "/frontPage/college";
+    }
+
+    //数字校史馆
+    @RequestMapping(value = "/library")
+    public String library(@RequestParam String type,Model model){
+        List<Scene> sceneList=sceneService.findSceneByType(Integer.parseInt(type));
+        model.addAttribute("sceneList",sceneList);
+        return "/frontPage/college";
+    }
+    //数字校史馆
+    @RequestMapping(value = "/lab")
+    public String lab(@RequestParam String type,Model model){
+        List<Scene> sceneList=sceneService.findSceneByType(Integer.parseInt(type));
+        List<Picture> pictureList=pictureService.findPictureByPictureType(Integer.parseInt(type));
+        model.addAttribute("sceneList",sceneList);
+        model.addAttribute("pictureList",pictureList);
+        return "/frontPage/college";
+    }
+
+
 
     @RequestMapping("/museum")
     public String museum(Model model, HttpSession session){
@@ -182,7 +209,7 @@ public class HomeIndexController {
     }
 
     @RequestMapping("/originality")
-    public String innovate(Model model, HttpSession session,@RequestParam String name){
+    public String innovate(Model model, HttpSession session,@RequestParam int id){
         User user = (User)session.getAttribute("user");
         if(user!=null){
             model.addAttribute("user",user);
@@ -190,13 +217,15 @@ public class HomeIndexController {
 /*
         List<Article> articleList = articleService.findAllShowArticle();*/
         List<Organization> organizationList = organizationService.findAllOrganization();
-        List<Article> articleList=articleService.findArticleByOrganization(name);
-        System.out.print(name);
+        List<Article> articleList=articleService.findArticleByOrganization(id);
+        System.out.print(id);
         System.out.print("测试");
         model.addAttribute("articleList",articleList);
         model.addAttribute("organizationList",organizationList);
         return "/frontPage/innovate";
     }
+
+
     //跳转到三维数字场景
     @RequestMapping(value ="/digitalscene" )
     public String digitalScence(){
@@ -210,6 +239,8 @@ public class HomeIndexController {
         model.addAttribute("organizationList",organizationList);
         return "/frontPage/digital-art-list";
     }
+
+
     @RequestMapping("/sceneList")
     public String sceneList(Model model, HttpSession session){
         User user = (User)session.getAttribute("user");

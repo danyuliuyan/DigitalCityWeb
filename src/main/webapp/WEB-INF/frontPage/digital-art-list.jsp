@@ -134,7 +134,7 @@
 <script>
   $("#organizationList li").click(function(){
     var organizationId=$(this).attr("data-organizationid");
-    alert(organizationId);
+    location.href="${pageContext.request.contextPath}/originality?id="+organizationId;
   })
 </script>
 </body>

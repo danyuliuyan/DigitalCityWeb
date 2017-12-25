@@ -96,4 +96,7 @@ public class SceneService {
     public void deleteScene(Integer id){
         sceneRepository.deleteScene(id);
     }
+
+    /*按场景类别查询场景*/
+    public List<Scene> findSceneByType(int type){return  sceneRepository.findSceneByType(type);}
 }

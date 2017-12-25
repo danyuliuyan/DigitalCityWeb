@@ -15,6 +15,7 @@
     <title>数字艺术之城</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/jquery-2.2.4.min.js"></script>
     <link href="${pageContext.request.contextPath}/frontAsset/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/frontAsset/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -57,8 +58,8 @@
             <ul id="instrumentList" class="instrument-list">
 
                 <c:forEach var="listItem" items="${instrumentList}">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/artDetail?id=${listItem.id}">
+                    <li class="preLoad" data-url="${listItem.name}">
+                        <a href="${pageContext.request.contextPath}/artDetail?id=${listItem.id}" >
                             <img src="${pageContext.request.contextPath}/${listItem.thumb}" alt="" />
                             <div>
                                 <h5>${listItem.name}</h5>
@@ -67,16 +68,6 @@
                         </a>
                     </li>
                 </c:forEach>
-                <%--
-                <li>
-                    <a href="javascript:;">
-                        <img src="${pageContext.request.contextPath}/frontAsset/images/dahao.png" alt="" />
-                        <div>
-                            <h5>Music</h5>
-                            <span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-                        </div>
-                    </a>
-                </li>--%>
             </ul>
 
             <ul id="musicList" class="music-list">
@@ -98,7 +89,22 @@
     </div>
 </div>
 
+<script>
+    $(".preLoad").click(function(){
+        alert($(this).attr("data-url"))
+        let src="${pageContext.request.contextPath}/fileUpload/art/instrument/"+"accordion"+"/audio/";
+        let audioName=["diyinA","diyinB","diyinC","diyinD","diyinE","diyinF","diyinG",
+            "A","B","C","D","E","F","G","gaoyinA","gaoyinB","gaoyinC","gaoyinD",
+            "gaoyinE","gaoyinF","gaoyinG"];
+        for(i=0;i<audioName.length;i++){
+            let o= new Audio();
+            o.src=src+audioName[i]+".mp3";
+            o.load();
+        }
+    })
 
+
+</script>
 
 <!--尾部-->
 <jsp:include page="include/footer.jsp"></jsp:include>

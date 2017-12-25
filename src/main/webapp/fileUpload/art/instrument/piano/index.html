@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -5,6 +6,9 @@
 <title>钢琴</title>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/piano.js" ></script>
+ <script src="js/soundmanager2.js"></script>
+<script src="js/PxLoader.js"></script>
+ <script src="js/PxLoaderSound.js"></script>
 <style>
  body{margin:0;padding:0;}
  ul,li{margin:0;padding:0;list-style-type:none;}
@@ -94,7 +98,38 @@
    <li class="piano-blackbt" id="keyb18"style="margin-left:6px;"></li>
   </ul>
  </div>
- 
+ <script>
+  soundManager.url='/swf';
+  soundManager.flashVersion=9;
+  soundManager.useHighPerformance=true;
+  soundManager.flashLoadTimeout=500;
+  soundManager.audioFormats.mp3.required=false;
+  soundManager.ontimeout(function(status){
+   soundManager.useHTML5Audio=true;
+   soundManager.preferFlash=false;
+   soundManager.reboot();
+  })
+  soundManager.onready(function(){
+   alert("soundmanager is ready");
+  })
+
+/*  var soundNames=['A0','A1','A2','A3','A4','A5','A6','A7','A8',
+   'B1','B2','D3','B4','B5','B6','B7','B8','C1','C2','C3','C4','C5','C6','C7','C8',
+   'D1','D2','D3','D4','D5','D6','D7','D8',
+    'E1','E2','E3','E4','E5','E6','E7','E8',
+    'C4','F4']
+  loader = new PxLoader(), i, len, url;
+
+  // queue each sound for loading
+  for(i=0, len = soundNames.length; i < len; i++) {
+   url = 'audio/' + soundNames[i] + '.mp3';
+
+   loader.addSound(soundNames[i], url);
+  }*/
+  loader=new PxLoader();
+  loader.addSound(1,"/audio/C4.mp3",'',1,'');
+  loader.start();
+ </script>
 
 <script>
 <!--默认白键全部追加未点击的按键样式-->

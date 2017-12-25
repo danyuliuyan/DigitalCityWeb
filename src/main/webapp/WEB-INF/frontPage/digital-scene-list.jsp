@@ -67,7 +67,7 @@
   }
 
   .scene-lists{
-    margin: 40px 0;
+    margin: 40px auto;
     display: flex;
     display: -webkit-flex;
     /*justify-content: space-between;*/
@@ -78,7 +78,7 @@
   .scene-list{
     min-width: 230px;
     list-style-type: none;
-    margin: 0 5px;
+    margin: 0 auto;
     padding: 0;
     border: 1px solid #ccc;
   }
@@ -124,14 +124,14 @@
           <li><a href="http://www.ourinnovate.com:82/scenelists/shuzijuchang/index.html" target="_blank">百乐门</a></li>
           <li><a href="http://www.ourinnovate.com:82/scenelists/shuzijuchang/index.html" target="_blank">湖北省京剧院</a></li>
         </ul>
-        <ul class="scene-list">
+      <%--  <ul class="scene-list">
           <li class="title">数字全景新闻(无数据)</li>
           <li><a href="javascript:void(0)" target="_blank">2015年CEDC中日韩三国大学生科技创新竞赛</a></li>
           <li><a href="javascript:void(0)" target="_blank">2015年大学生创新创业训练计划及大学生节能减排竞赛作品成果展示&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学南湖新图书馆开馆</a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学艺术馆的开馆仪式</a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学西院樱花灿烂</a></li>
-        </ul>
+        </ul>--%>
         <ul class="scene-list">
           <li class="title">数字企业</li>
           <li><a href="http://www.ourinnovate.com:82/scenelists/shanghaihuyue/index.html" target="_blank">上海虎跃舞台设备科技有限公司</a></li>
@@ -148,6 +148,15 @@
           <li><a href="javascript:void(0)" target="_blank">江苏大学机械学院 </a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学南湖新图书馆</a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学管院大楼</a></li>
+        </ul>
+        <ul class="scene-list">
+          <li class="title">VR视频(无数据)</li>
+          <li><a href="javascript:void(0)" target="_blank">武汉理工大学东院校区 </a></li>
+          <li><a href="javascript:void(0)" target="_blank">武汉理工大学南湖校区</a></li>
+          <li><a href="javascript:void(0)" target="_blank">武汉理工大学新一教学楼</a></li>
+          <li><a href="" target="_blank">孝感金卉庄园(无数据)</a></li>
+          <li><a href="" target="_blank">双桥古镇(无数据)</a></li>
+          <li><a href="http://720yun.com/t/d4021j86juv" target="_blank">九房沟</a></li>
         </ul>
       </div>
     </section>
@@ -168,17 +177,15 @@
         <ul class="scene-list">
           <li class="title">数字古村落</li>
           <li><a href="http://720yun.com/t/d4021j86juv" target="_blank">大悟九房沟村</a></li>
+          <li><a href="" target="_blank">双桥古镇(无数据)</a></li>
+          <li><a href="" target="_blank">砖窑(无数据)</a></li>
         </ul>
         <ul class="scene-list">
           <li class="title">数字街景</li>
           <li><a href="http://www.ourinnovate.com:82/scenelists/lihuangpilu/index.html" target="_blank">黎黄陂路街头博物馆</a></li>
+          <li><a href="" target="_blank">孝感金卉庄园(无数据)</a></li>
         </ul>
-        <ul class="scene-list">
-          <li class="title">VR视频(无数据)</li>
-          <li><a href="javascript:void(0)" target="_blank">武汉理工大学东院校区 </a></li>
-          <li><a href="javascript:void(0)" target="_blank">武汉理工大学南湖校区</a></li>
-          <li><a href="javascript:void(0)" target="_blank">武汉理工大学新一教学楼</a></li>
-        </ul>
+
 
       </div>
     </section>

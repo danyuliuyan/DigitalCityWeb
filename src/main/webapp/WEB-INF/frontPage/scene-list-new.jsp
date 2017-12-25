@@ -126,6 +126,8 @@
         <li><a href="http://www.ourinnovate.com:82/scenelists/wenliansishihuayu/index.html" target="_blank">武汉市文联—“四时花雨”（第二回）沈伟水墨花鸟作品展</a></li>
         <li><a href="http://720yun.com/t/f0523u8kjlv" target="_blank">武汉市文联—“墨道君行晚”曾雪萍 陈复荣 陈东旭书画展</a></li>
         <li><a href="http://www.ourinnovate.com:82/scenelists/wenlianyuanjiewuhan/index.html" target="_blank">武汉市文联—缘结 武汉 韩威生 高鸣书画作品展</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/daqishijie/index.html" target="_blank">湖北省美术馆—“大漆世界：时序”2016湖北国际漆艺三年展</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/shengshibainian/index.html" target="_blank">湖北省艺术馆—“百年纵横”20世纪湖北省美术文献展</a></li>
       </ul>
     </div>
    </section>
@@ -136,8 +138,8 @@
     <div class="scene-lists">
       <ul class="scene-list">
         <li class="title">三维数字艺术馆</li>
-        <li><a href="http://www.ourinnovate.com:82/scenelists/daqishijie/index.html" target="_blank">湖北省美术馆—“大漆世界：时序”2016湖北国际漆艺三年展</a></li>
-        <li><a href="http://www.ourinnovate.com:82/scenelists/shengshibainian/index.html" target="_blank">湖北省艺术馆—“百年纵横”20世纪湖北省美术文献展</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/daqishijie/index.html" target="_blank">湖北省美术馆(无数据)</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/shengshibainian/index.html" target="_blank">武汉市残疾人艺术馆(无数据)</a></li>
         <li><a href="http://www.ourinnovate.com:82/whut/artMuseum/index.html" target="_blank">武汉理工大学艺术馆</a></li>
       </ul>
     </div>

@@ -24,4 +24,6 @@ public interface PictureRepository extends JpaRepository<Picture,String>,JpaSpec
     @Modifying
     @Query("delete from Picture where lower(id) = lower(:id) ")
     public void deletePicture(@Param("id") Integer id);
+    @Query("select o from Picture o where lower(o.pictureType)=lower(:pictureType) ")
+    public List<Picture> findPictureByPictureType(@Param("pictureType")Integer pictureType);
 }

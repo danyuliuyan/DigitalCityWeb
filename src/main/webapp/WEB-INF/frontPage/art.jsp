@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: dushang
-  Date: 17/2/28
-  Time: 1:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -12,7 +5,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>数字艺术之城</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/jquery-2.2.4.min.js"></script>

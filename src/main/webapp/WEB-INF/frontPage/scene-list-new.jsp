@@ -138,8 +138,8 @@
     <div class="scene-lists">
       <ul class="scene-list">
         <li class="title">三维数字艺术馆</li>
-        <li><a href="http://www.ourinnovate.com:82/scenelists/daqishijie/index.html" target="_blank">湖北省美术馆(无数据)</a></li>
-        <li><a href="http://www.ourinnovate.com:82/scenelists/shengshibainian/index.html" target="_blank">武汉市残疾人艺术馆(无数据)</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/hubeishengmeishuguan/index.html" target="_blank">湖北省美术馆</a></li>
+        <li><a href="http://www.ourinnovate.com:82/scenelists/canjirenyishuguan/index.html" target="_blank">武汉市残疾人艺术馆</a></li>
         <li><a href="http://www.ourinnovate.com:82/whut/artMuseum/index.html" target="_blank">武汉理工大学艺术馆</a></li>
       </ul>
     </div>

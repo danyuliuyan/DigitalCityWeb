@@ -140,7 +140,7 @@
           <li><a href="http://www.ourinnovate.com:82/scenelists/honglianwutaiwang/index.html" target="_blank">红脸舞台网</a></li>
         </ul>
         <ul class="scene-list">
-          <li class="title">三维场景(无数据)</li>
+          <li class="title">三维场景</li>
           <li><a href="javascript:void(0)" target="_blank">水面船、半潜船、全潜船巡游场景</a></li>
           <li><a href="javascript:void(0)" target="_blank">根雕</a></li>
           <li><a href="javascript:void(0)" target="_blank">蕲春泥塑</a></li>
@@ -150,21 +150,21 @@
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学管院大楼</a></li>
         </ul>
         <ul class="scene-list">
-          <li class="title">VR视频(无数据)</li>
-          <li><a href="javascript:void(0)" target="_blank">武汉理工大学东院校区 </a></li>
+          <li class="title">VR视频</li>
+          <li><a href="${pageContext.request.contextPath}/getDigitalScene?id=1" target="_blank">武汉理工大学东院校区 </a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学南湖校区</a></li>
           <li><a href="javascript:void(0)" target="_blank">武汉理工大学新一教学楼</a></li>
-          <li><a href="" target="_blank">孝感金卉庄园(无数据)</a></li>
-          <li><a href="" target="_blank">双桥古镇(无数据)</a></li>
-          <li><a href="http://720yun.com/t/d4021j86juv" target="_blank">九房沟</a></li>
+          <li><a href="${pageContext.request.contextPath}/getDigitalScene?id=2" target="_blank">孝感金卉庄园</a></li>
+          <li><a href="${pageContext.request.contextPath}/getDigitalScene?id=3" target="_blank">双桥古镇</a></li>
+          <li><a href="${pageContext.request.contextPath}/getDigitalScene?id=4" target="_blank">九房沟</a></li>
         </ul>
       </div>
     </section>
     <section>
       <div class="scene-lists">
         <ul class="scene-list">
-          <li class="title">数字商品展示(无数据)</li>
-          <li><a href="javascript:void(0)" target="_blank">鼎充新能源汽车充电桩</a></li>
+          <li class="title">数字商品展示</li>
+          <li><a href="http://www.ourinnovate.com:82/scenelists/chongdianzhuang/index.html" target="_blank">鼎充新能源汽车充电桩</a></li>
         </ul>
 
 
@@ -177,13 +177,13 @@
         <ul class="scene-list">
           <li class="title">数字古村落</li>
           <li><a href="http://720yun.com/t/d4021j86juv" target="_blank">大悟九房沟村</a></li>
-          <li><a href="" target="_blank">双桥古镇(无数据)</a></li>
-          <li><a href="" target="_blank">砖窑(无数据)</a></li>
+          <li><a href="${pageContext.request.contextPath}/getDigitalScene?id=3" target="_blank">双桥古镇</a></li>
+          <li><a href="http://www.ourinnovate.com:82/scenelists/zhuanyao/index.html" target="_blank">砖窑</a></li>
         </ul>
         <ul class="scene-list">
           <li class="title">数字街景</li>
           <li><a href="http://www.ourinnovate.com:82/scenelists/lihuangpilu/index.html" target="_blank">黎黄陂路街头博物馆</a></li>
-          <li><a href="" target="_blank">孝感金卉庄园(无数据)</a></li>
+          <li><a href="http://www.ourinnovate.com:82/scenelists/jinhuizhuangyuan/index.html" target="_blank">孝感金卉庄园</a></li>
         </ul>
 
 

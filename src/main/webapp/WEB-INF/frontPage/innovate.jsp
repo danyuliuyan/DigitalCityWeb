@@ -78,7 +78,7 @@
 <script>
     $("#resources-list li").click(function(){
 
-          let src=$(this).attr("data-url");
+          var src=$(this).attr("data-url");
           $("#iframeDetail").attr("src",src);
     })
 </script>

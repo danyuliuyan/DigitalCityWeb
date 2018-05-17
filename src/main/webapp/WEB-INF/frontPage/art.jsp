@@ -81,23 +81,6 @@
     </div>
 </div>
 
-<script>
-    $(".preLoad").click(function(){
-        alert($(this).attr("data-url"))
-        let src="${pageContext.request.contextPath}/fileUpload/art/instrument/"+"accordion"+"/audio/";
-        let audioName=["diyinA","diyinB","diyinC","diyinD","diyinE","diyinF","diyinG",
-            "A","B","C","D","E","F","G","gaoyinA","gaoyinB","gaoyinC","gaoyinD",
-            "gaoyinE","gaoyinF","gaoyinG"];
-        for(i=0;i<audioName.length;i++){
-            let o= new Audio();
-            o.src=src+audioName[i]+".mp3";
-            o.load();
-        }
-    })
-
-
-</script>
-
 <!--尾部-->
 <jsp:include page="include/footer.jsp"></jsp:include>
 

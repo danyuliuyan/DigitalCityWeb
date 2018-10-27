@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <%--<link rel="shortcut icon" href="${pageContext.request.contextPath}/frontAsset/images/icon.png">--%>
-    <title>数字文化五城管理系统</title>
+    <title>虚拟乐器平台后台管理系统</title>
     <script src="${pageContext.request.contextPath}/backAsset/Static/BJUI/js/jquery-1.7.2.min.js"></script>
     <script src="${pageContext.request.contextPath}/backAsset/Static/BJUI/js/jquery.cookie.js"></script>
     <%--<script src="${pageContext.request.contextPath}/backAsset/Static/js/sha256.js"></script>--%>

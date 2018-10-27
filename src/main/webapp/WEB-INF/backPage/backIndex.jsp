@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>数字文化五城管理系统</title>
+    <title>虚拟乐器平台后台管理系统</title>
     <meta name="Keywords" content=""/>
     <%--<link rel="shortcut icon" href="${pageContext.request.contextPath}/frontAsset/images/icon.png">--%>
     <%@ include file="Common/intoHead.jsp" %>
@@ -33,7 +33,7 @@
 
             <div class="navtab-panel tabsPageContent">
                 <div class="navtabPage unitBox">
-                    <h2 style="background:#FFF;text-align: center;padding-top: 10%;">欢迎来到数字文化五城管理系统</h2>
+                    <h2 style="background:#FFF;text-align: center;padding-top: 10%;">虚拟乐器平台后台管理系统</h2>
                 </div>
             </div>
         </div>

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: dushang
-  Date: 17/1/23
-  Time: 0:35
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,31 +14,25 @@
     <link href="${pageContext.request.contextPath}/frontAsset/assets/css/header.css" rel="stylesheet">
     <div class="container">
         <div class="navbar-header">
-
             <!-- logo -->
             <a class="navbar-brand" href="${pageContext.request.contextPath}/index">
                 <h1 id="logo">
-                    <img src="${pageContext.request.contextPath}/frontAsset/images/logo.png" alt="数字文化五城" />
+                    <div style="font-family: 'Microsoft YaHei UI';color: white;font-size: 30px ">虚拟乐器平台</div>
                 </h1>
             </a>
             <!-- /logo -->
         </div>
-
     </div>
 </header>
-
-
 <%--登录表单部分--%>
 <div class="register-container">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/register.css">
-
     <%--注册成功提示信息--%>
     <div class="alert alert-success" id="successInfo">
         <i class="fa fa-check-circle" aria-hidden="true"></i><strong>注册成功，正在跳转到登录页面！</strong>
     </div>
-
     <div>
-        <img src="${pageContext.request.contextPath}/frontAsset/images/dancer02.png" id="registerImg">
+        <img src="${pageContext.request.contextPath}/frontAsset/images/dancer020.png" id="registerImg">
         <div class="register-form">
             <div class="title">注册</div>
             <div class="alert alert-danger">

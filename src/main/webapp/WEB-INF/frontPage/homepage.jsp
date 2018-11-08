@@ -93,12 +93,12 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h1 class="first-child animated slideInRight delay-2">数字艺术之城<strong><span class="text-blue"> </span></strong> <small>虚拟乐器</small></h1>
+                                    <h1 class="first-child animated slideInRight delay-2">虚拟乐器平台<strong><span class="text-blue"> </span></strong> <small>虚拟乐器</small></h1>
                                     <ul>
                                         <li class="animated slideInRight delay-5"><i class="fa fa-star"></i>在线音乐欣赏</li>
                                         <li><h4 class="animated fadeInUpBig delay-4"><span>在线乐器个人演奏</span></h4></li>
-                                        <li class="animated slideInRight delay-6"><i class="fa fa-star"></i>个人音乐发布收藏</li>
-                                        <li><h4 class="animated fadeInUpBig delay-4"><span>在线乐器多人协奏</span></h4></li>
+<%--                                        <li class="animated slideInRight delay-6"><i class="fa fa-star"></i>个人音乐发布收藏</li>
+                                        <li><h4 class="animated fadeInUpBig delay-4"><span>在线乐器多人协奏</span></h4></li>--%>
                                         <li><br><br><a class="btn-animate btn-style btn-lg btn-f btn-primary animated bounceInDown delay-6" href="${pageContext.request.contextPath}/art"> >> 查看详情</a></li>
                                     </ul>
                                 </div>

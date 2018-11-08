@@ -19,42 +19,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- /responsive nav button -->
-
-            <!-- logo -->
             <a class="navbar-brand" href="${pageContext.request.contextPath}/index">
                 <h1 id="logo">
-                    <img src="${pageContext.request.contextPath}/frontAsset/images/logo.png" alt="数字文化五城" />
+                    <%--<img src="${pageContext.request.contextPath}/backAsset/images/logo.png" alt="虚拟乐器平台" />--%>
+                    <div style="color: white;font-size: 30px;font-family: 'Microsoft YaHei UI'">虚拟乐器平台</div>
                 </h1>
             </a>
-            <!-- /logo -->
         </div>
-
         <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <li data-tab="1" class="current-tab"><a href="${pageContext.request.contextPath}/index">首页</a></li>
-                <li data-tab="2" class="slide-menu"><a href="javascript:void(0)">大学之城</a>
-                <ul>
-                    <li><a href="${pageContext.request.contextPath}/history?type=1">数字校史馆</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/library?type=2">数字图书馆</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/lab?type=3">数字实验室</a> </li>
-                    <li><a href="${pageContext.request.contextPath}/university">数字校园</a> </li>
-                </ul>
-                </li>
-                <li data-tab="3"><a href="${pageContext.request.contextPath}/museum">博物馆之城</a></li>
-                <li data-tab="4"><a href="http://www.cjzww.com/" target="_blank">阅读之城</a></li>
-                <li data-tab="5" class="slide-menu"><a href="javascript:void(0)">艺术之城</a>
+                <li data-tab="5" class="slide-menu"><a href="javascript:void(0)">虚拟乐器平台</a>
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/art">音乐创作平台</a> </li>
-                        <li><a href="${pageContext.request.contextPath}/sceneList#exhibition">数字展览馆</a></li>
-                        <li><a href="${pageContext.request.contextPath}/sceneList#gallery">数字艺术馆</a> </li>
-                    </ul>
-                </li>
-                <li data-tab="6" class="slide-menu"><a href="javascript:void(0)">创意之城</a>
-                    <ul>
-                        <li><a href="${pageContext.request.contextPath}/digitalscene" target="_self">三维数字场景</a></li>
-                        <li><a href="${pageContext.request.contextPath}/digitalart" target="_self">数字美术</a></li>
                     </ul>
                 </li>
                 <c:if test="${user==null}"><li class="login-option"><a href="${pageContext.request.contextPath}/login">登录/注册</a></li></c:if>

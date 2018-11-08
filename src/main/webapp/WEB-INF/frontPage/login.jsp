@@ -25,7 +25,8 @@
             <!-- logo -->
             <a class="navbar-brand" href="${pageContext.request.contextPath}/index">
                 <h1 id="logo">
-                    <img src="${pageContext.request.contextPath}/frontAsset/images/logo.png" alt="数字文化五城" />
+                    <%--<img src="${pageContext.request.contextPath}/frontAsset/images/logo.png" alt="数字文化五城" />--%>
+                    <p style="color: white;">虚拟乐器平台</p>
                 </h1>
             </a>
             <!-- /logo -->

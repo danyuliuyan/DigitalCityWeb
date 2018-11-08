@@ -15,9 +15,7 @@
 <body>
 
 <jsp:include page="include/header.jsp"></jsp:include>
-
 <%--<div id="canvas" class="gradient" ></div>--%>
-
 <div class="main-container">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/frontAsset/assets/css/art.css">
     <div class="page-welcome">

@@ -45,7 +45,7 @@
     </div>
 
     <div>
-        <img src="${pageContext.request.contextPath}/frontAsset/images/dancer02.png" id="registerImg">
+        <img src="${pageContext.request.contextPath}/frontAsset/images/dancer02%20.png" id="registerImg">
         <div class="register-form">
             <div class="title">注册</div>
             <div class="alert alert-danger">

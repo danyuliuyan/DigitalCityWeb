@@ -45,10 +45,8 @@
     </div>
     <div class="instrument">
         <div>
-            <h2><span class="selected" data-ul-target="instrumentList">乐器列表</span><span data-ul-target="musicList">音乐试听</span></h2>
-
+            <h2><span class="selected" data-ul-target="instrumentList" id="insList">乐器列表</span><span data-ul-target="musicList" id="musics">音乐试听</span></h2>
             <ul id="instrumentList" class="instrument-list">
-
                 <c:forEach var="listItem" items="${instrumentList}">
                     <li class="preLoad" data-url="${listItem.name}">
                         <a href="${pageContext.request.contextPath}/artDetail?id=${listItem.id}" >
@@ -61,31 +59,111 @@
                     </li>
                 </c:forEach>
             </ul>
+            <%--试听案例列表--%>
 
-            <ul id="musicList" class="music-list">
-                <c:forEach var="listItem" items="${musicList}">
-                    <li>
-                        <label><i class="fa fa-music" aria-hidden="true"></i></label>
-                        <span>${listItem.name} --- ${listItem.singer}</span>
-                        <div class="options">
-                            <span><i class="fa fa-play" aria-hidden="true" title="点击播放"></i></span>
-                            <span><i class="fa fa-pause" aria-hidden="true" title="点击暂停"></i></span>
-                            <span><i class="fa fa-stop" aria-hidden="true" title="点击停止"></i></span>
-                            <%--<span><i class="fa fa-heart" aria-hidden="true" title="点击收藏/取消收藏"></i></span>--%>
-                        </div>
-                        <audio src="${pageContext.request.contextPath}/${listItem.source}" hidden></audio>
-                    </li>
-                </c:forEach>
-            </ul>
+            <ul id="musicList" class="music-list"></ul>
         </div>
     </div>
 </div>
 
 <!--尾部-->
 <jsp:include page="include/footer.jsp"></jsp:include>
-
 <script>var contextPath="${pageContext.request.contextPath}";</script>
+
 <script src="${pageContext.request.contextPath}/frontAsset/assets/js/common/require.min.js" rel="script" defer data-main="${pageContext.request.contextPath}/frontAsset/assets/js/art-main"></script>
+<script>
+    var tempPage;
+    $('#musicList').on('click','.fa-play',function(){
+        var parentEle = $(this).parent().parent().parent();
+        parentEle.siblings().find('label').removeClass('rotate');
+        parentEle.siblings().find('audio').each(function(index,ele){
+            ele.pause();
+            console.log(index+ele);
+        });
+        parentEle.find('label').addClass('rotate');
+        parentEle.find('audio')[0].play();
+    });
+    $('#musicList').on('click','.fa-pause',function(){
+        var parentEle = $(this).parent().parent().parent();
+        parentEle.find('label').removeClass('rotate');
+        parentEle.find('audio')[0].pause();
+    });
+
+    $('#musicList').on('click','.fa-stop',function(){
+        var parentEle = $(this).parent().parent().parent();
+        parentEle.find('label').removeClass('rotate');
+        parentEle.find('audio')[0].currentTime = 0;
+        parentEle.find('audio')[0].pause();
+    })
+
+
+
+    $("#musics").click(function(){
+        getData(1);
+        $("#insList").removeClass('selected');
+        $(this).attr('class','selected');
+    });
+    function getData(currentPage){
+        $.ajax(
+            {
+                type:"GET",
+                url:"${pageContext.request.contextPath}/music",
+                data:{currentPage:currentPage},
+                dataType:"json",
+                success:function (data) {
+                    tempPage = data['page'];
+                    showMusic(data['musicList']);
+                    showPage(data['page']);
+                }
+            }
+        )
+    }
+
+    function showMusic(mulist){
+        $("#musics").attr('class','selected')
+        var len = mulist.length;
+        var muul = $('#musicList');
+        muul.empty();
+        for(var i = 0 ;i < len ; i++){
+            var node1 = '<li><label><i class="fa fa-music" aria-hidden="true"></i></label>'
+                        +'<span>'+mulist[i].name+'---'+mulist[i].singer+'</span>'
+                        +'<div class="options">'
+                        +'<span><i class="fa fa-play" aria-hidden="true" title="点击播放"></i></span>'
+                        +'<span><i class="fa fa-pause" aria-hidden="true" title="点击暂停"></i></span>'
+                        +'<span><i class="fa fa-stop" aria-hidden="true" title="点击停止"></i></span>'
+                        +'<span><i class="fa fa-heart" aria-hidden="true" title="点击收藏/取消收藏"></i></span>'
+                        +'</div>'
+                        +'<audio src="${pageContext.request.contextPath}/'+mulist[i].source+'"hidden></audio>'
+                        +'</li>';
+            muul.append(node1);
+        }
+
+    }
+
+    function showPage(page){
+        $("#musics").attr('class','selected')
+        var base ='<li style="width: 100%;height: 60px;text-align: center;">'+'<a style="cursor: pointer"  id="firstPage">首页&nbsp</a>';
+        var end = '</li>';
+        var pre = '<a style="cursor: pointer" id="prePage">&nbsp上一页&nbsp</a>';
+        var next ='<a style="cursor: pointer" id="nextPage">&nbsp下一页&nbsp</a>';
+        var end = '<a style="cursor: pointer" id="lastPage">尾页&nbsp</a>'
+        var current = '当前'+page.currentPage+'/'+page.totalPage+'页';
+        var node = base + pre + current + next +end;
+        $('#musicList').append(node);
+    }
+
+    // 换页跳转判断
+    $("#musicList").on('click','a',function(){
+        var flag = $(this).attr('id');
+        switch(flag) {
+            case 'firstPage':getData(1);break;
+            case 'lastPage':getData(tempPage.totalPage);break;
+            case 'prePage':if(tempPage.hasPrePage){getData(tempPage.currentPage-1)};break;
+            case 'nextPage':if(tempPage.hasNextPage){getData(tempPage.currentPage+1)};break;
+        }
+    })
+
+</script>
 
 </body>
 </html>

@@ -29,4 +29,7 @@ public interface MusicRepository extends JpaRepository<Music,String>,JpaSpecific
     @Modifying
     @Query("delete from Music where lower(id) = lower(:id) ")
     public void deleteMusic(@Param("id") Integer id);
+    // 查询案例总数提供给分页函数
+    @Query("select count(o) from Music o where o.status=1")
+    public int getMusicNum();
 }

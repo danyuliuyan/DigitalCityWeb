@@ -3,6 +3,9 @@ package com.digitalcity.Controller.Home;
 import com.digitalcity.Model.*;
 import com.digitalcity.Service.*;
 import com.digitalcity.Utils.MD5;
+import com.digitalcity.Utils.PageUtil;
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
+import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -22,7 +25,7 @@ import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
-
+import org.hibernate.Query;
 /**
  * Created by dushang on 16/12/13.
  */
@@ -58,6 +61,8 @@ public class HomeIndexController {
 
     @Autowired
     private SceneService sceneService;
+    @Autowired
+    private EntityManager entityManager;
 
     @RequestMapping("")
     public String toIndex(){
@@ -176,7 +181,6 @@ public class HomeIndexController {
 
         return "/frontPage/museum-detail";
     }
-
     @RequestMapping("/art")
     public String art(Model model, HttpSession session){
         User user = (User)session.getAttribute("user");
@@ -185,13 +189,49 @@ public class HomeIndexController {
         }
 
         List<Instrument> instrumentList = instrumentService.findAllInstrumentNormal();
-        List<Music> musicList = musicService.findAllShowMusic();
-
-        model.addAttribute("musicList",musicList);
+        //ToDo 对乐器进行分页查
+        /*  int totalNum = musicService.getMusicNum();
+            Map map = getMusicByPage(20,totalNum,1);
+        */
+        // 案例未分页  改为分页调用
+//      List<Music> musicList = musicService.findAllShowMusic();
+//      model.addAttribute("musicList",map.get("musicList"));
         model.addAttribute("instrumentList",instrumentList);
-
+//      model.addAttribute("page",map.get("page"));
         return "/frontPage/art";
     }
+    @ResponseBody
+    @RequestMapping(value = "/music",method = RequestMethod.GET)
+    public Map getMusic(int currentPage){
+        //ToDo 在此处对请求案例进行分页
+        int totalNum = musicService.getMusicNum();
+        Map map = getMusicByPage(20,totalNum,currentPage);
+        return map;
+    }
+
+    Map getMusicByPage(int everyPage,int totalNumber,int currentPage) {
+        HashMap map = new HashMap();
+        javax.persistence.Query query =  entityManager.createNativeQuery("select * From dc_music o WHERE o.status=1 order by o.name DESC ");
+        Page page = PageUtil.createPage(everyPage,totalNumber,currentPage);
+        query.setMaxResults(page.getEveryPage());
+        query.setFirstResult(page.getBeginIndex());
+        List resultSet = query.getResultList();
+        List<Music> musicList = new ArrayList<>(20);
+        for (Object aResultSet : resultSet) {
+            Object[] o = (Object[]) aResultSet;
+            Music musicItem = new Music();
+            musicItem.setId((Integer) o[0]);
+            musicItem.setName(o[1].toString());
+            musicItem.setSinger(o[2].toString());
+            musicItem.setSource(o[3].toString());
+            musicItem.setStatus((Integer) o[4]);
+            musicList.add(musicItem);
+        }
+        map.put("musicList",musicList);
+        map.put("page",page);
+        return map;
+    }
+
 
     @RequestMapping("/artDetail")
     public String artDetail(Model model, HttpSession session, String id){

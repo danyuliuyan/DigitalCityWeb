@@ -101,4 +101,8 @@ public class MusicService {
     public void deleteMusic(Integer id){
         musicRepository.deleteMusic(id);
     }
+    // 获取音乐案例总数
+    public int getMusicNum(){
+        return musicRepository.getMusicNum();
+    }
 }
